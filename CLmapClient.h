@@ -10,10 +10,21 @@ namespace NS_Comp_Mappage
 	{
 	protected:
 		String^ sSql;
+
+		String^ numeroClient;
+		String^ nom;
+		String^ prenom;
+		String^ dateNaissance;
+
 	public:
-		String^ Select(void);
-		String^ Insert(void);
-		String^ Delete(void);
-		String^ Update(void);
+		String^ Select(void) new;
+		String^ Insert(void) new;
+		String^ Delete(void) new;
+		String^ Update(void) new;
+
+		void setNumeroClient(String^);
+		void setNom(String^);
+		void setPrenom(String^);
+		void setDateNaissance(String^);
 	};
 }
