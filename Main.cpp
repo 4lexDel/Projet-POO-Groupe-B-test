@@ -7,7 +7,7 @@ using namespace System::Windows::Forms;
 void Main(array<String^>^ args) {
     Application::EnableVisualStyles();
     Application::SetCompatibleTextRenderingDefault(false);
-    //WinformCDemo is your project name
+
     ProjetPOOGroupeB::MyForm form;
     Application::Run(% form);
 }

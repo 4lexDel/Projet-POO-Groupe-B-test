@@ -123,11 +123,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\PROSIT\Prosit 6\Prosit 6\CAD.cpp" />
+    <ClCompile Include="..\..\..\PROSIT\Prosit 6\Prosit 6\CLmapTB.cpp" />
+    <ClCompile Include="..\..\..\PROSIT\Prosit 6\Prosit 6\CLservice.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MyForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\PROSIT\Prosit 6\Prosit 6\CAD.h" />
+    <ClInclude Include="..\..\..\PROSIT\Prosit 6\Prosit 6\CLmapTB.h" />
+    <ClInclude Include="..\..\..\PROSIT\Prosit 6\Prosit 6\CLservice.h" />
+    <ClInclude Include="CLmapClient.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
