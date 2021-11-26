@@ -6,15 +6,15 @@ using System::String;
 
 namespace NS_Comp_Mappage
 {
-	public ref class CLmapClient
+	public ref class CLmapPersonnel
 	{
 	protected:
 		String^ sSql;
 
-		String^ numeroClient;
+		String^ IDPersonnel;
 		String^ nom;
 		String^ prenom;
-		String^ dateNaissance;
+		String^ dateEmbauche;
 
 	public:
 		String^ Select(void) new;
@@ -22,9 +22,9 @@ namespace NS_Comp_Mappage
 		String^ Delete(void) new;
 		String^ Update(void) new;
 
-		void setNumeroClient(String^);
+		void setIDPersonnel(String^);
 		void setNom(String^);
 		void setPrenom(String^);
-		void setDateNaissance(String^);
+		void setdateEmbauche(String^);
 	};
 }

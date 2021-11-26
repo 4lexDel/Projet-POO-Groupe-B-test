@@ -129,6 +129,7 @@
     <ClCompile Include="CLservice.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="CLmapPersonnel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CLcad.h" />
@@ -136,6 +137,7 @@
     <ClInclude Include="CLmapstock.h" />
     <ClInclude Include="CLmapTB.h" />
     <ClInclude Include="CLservice.h" />
+    <ClInclude Include="CLmapPersonnel.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
