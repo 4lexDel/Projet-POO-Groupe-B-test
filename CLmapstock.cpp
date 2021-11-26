@@ -1,5 +1,5 @@
 #include "CLmapstock.h"
-
+/*using System::Data::SqlStock::SqlParameter; */
 String^ NS_Comp_Mappage::CLmapstock::Select(void)
 { 
     return "SELECT Nom, QuantiteStock, PrixProduit,SeuilReapprovisionnement FROM Article";

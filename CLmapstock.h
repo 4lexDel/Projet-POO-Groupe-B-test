@@ -9,7 +9,8 @@ namespace NS_Comp_Mappage
 	public ref class CLmapstock
 	{
 	protected :
-		
+		String^ sSql;
+
 		String^ reference;
 		String^ nom;
 		String^ quantitestock;
