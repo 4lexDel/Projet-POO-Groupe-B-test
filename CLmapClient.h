@@ -6,7 +6,7 @@ using System::String;
 
 namespace NS_Comp_Mappage
 {
-	public ref class CLmapClient : public CLmapTB
+	public ref class CLmapClient
 	{
 	protected:
 		String^ sSql;

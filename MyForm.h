@@ -236,9 +236,10 @@ namespace ProjetPOOGroupeB {
 			this->label4->AutoSize = true;
 			this->label4->Location = System::Drawing::Point(339, 522);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(126, 17);
+			this->label4->Size = System::Drawing::Size(278, 17);
 			this->label4->TabIndex = 8;
-			this->label4->Text = L"Date de naissance";
+			this->label4->Text = L"Date de naissance (Format : AAAA-MM-JJ)";
+			this->label4->Click += gcnew System::EventHandler(this, &MyForm::label4_Click);
 			// 
 			// ClientTabControl
 			// 
@@ -248,7 +249,7 @@ namespace ProjetPOOGroupeB {
 			this->ClientTabControl->Location = System::Drawing::Point(0, 0);
 			this->ClientTabControl->Name = L"ClientTabControl";
 			this->ClientTabControl->SelectedIndex = 0;
-			this->ClientTabControl->Size = System::Drawing::Size(752, 600);
+			this->ClientTabControl->Size = System::Drawing::Size(752, 620);
 			this->ClientTabControl->TabIndex = 11;
 			// 
 			// tabPage1
@@ -269,9 +270,9 @@ namespace ProjetPOOGroupeB {
 			this->tabPage1->Controls->Add(this->txt_dateNaissance);
 			this->tabPage1->Controls->Add(this->txt_prenom);
 			this->tabPage1->Location = System::Drawing::Point(4, 25);
-			this->tabPage1->Name = L"Client";
+			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage1->Size = System::Drawing::Size(744, 571);
+			this->tabPage1->Size = System::Drawing::Size(744, 591);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Client";
 			this->tabPage1->UseVisualStyleBackColor = true;
@@ -281,7 +282,7 @@ namespace ProjetPOOGroupeB {
 			this->tabPage2->Location = System::Drawing::Point(4, 25);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(752, 575);
+			this->tabPage2->Size = System::Drawing::Size(744, 571);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"tabPage2";
 			this->tabPage2->UseVisualStyleBackColor = true;
@@ -290,7 +291,7 @@ namespace ProjetPOOGroupeB {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(752, 600);
+			this->ClientSize = System::Drawing::Size(752, 620);
 			this->Controls->Add(this->ClientTabControl);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
 			this->Margin = System::Windows::Forms::Padding(4);
@@ -349,5 +350,7 @@ namespace ProjetPOOGroupeB {
 		btn_load_Click(sender, e);
 		resetInput();
 	}
+private: System::Void label4_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

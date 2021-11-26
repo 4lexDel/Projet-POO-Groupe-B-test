@@ -1,4 +1,5 @@
 #include "CLmapClient.h"
+using System::Data::SqlClient::SqlParameter;
 
 String^ NS_Comp_Mappage::CLmapClient::Select(void)
 {
