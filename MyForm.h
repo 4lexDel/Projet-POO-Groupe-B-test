@@ -111,6 +111,16 @@ namespace ProjetPOOGroupeB {
 	private: System::Windows::Forms::TextBox^ textBox10;
 	private: System::Windows::Forms::TextBox^ textBox11;
 	private: System::Windows::Forms::Label^ label15;
+	private: System::Windows::Forms::TabPage^ tabPage4;
+	private: System::Windows::Forms::Button^ button9;
+	private: System::Windows::Forms::DataGridView^ dataGridView3;
+	private: System::Windows::Forms::Button^ button16;
+	private: System::Windows::Forms::Button^ button15;
+	private: System::Windows::Forms::Button^ button14;
+	private: System::Windows::Forms::Button^ button13;
+	private: System::Windows::Forms::Button^ button12;
+	private: System::Windows::Forms::Button^ button11;
+	private: System::Windows::Forms::Button^ button10;
 
 
 
@@ -192,6 +202,16 @@ namespace ProjetPOOGroupeB {
 			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
+			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
+			this->button16 = (gcnew System::Windows::Forms::Button());
+			this->button15 = (gcnew System::Windows::Forms::Button());
+			this->button14 = (gcnew System::Windows::Forms::Button());
+			this->button13 = (gcnew System::Windows::Forms::Button());
+			this->button12 = (gcnew System::Windows::Forms::Button());
+			this->button11 = (gcnew System::Windows::Forms::Button());
+			this->button10 = (gcnew System::Windows::Forms::Button());
+			this->button9 = (gcnew System::Windows::Forms::Button());
+			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
 			this->ClientTabControl->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->BeginInit();
@@ -199,6 +219,8 @@ namespace ProjetPOOGroupeB {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->tabPage3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
+			this->tabPage4->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// ClientTabControl
@@ -206,6 +228,7 @@ namespace ProjetPOOGroupeB {
 			this->ClientTabControl->Controls->Add(this->tabPage1);
 			this->ClientTabControl->Controls->Add(this->tabPage2);
 			this->ClientTabControl->Controls->Add(this->tabPage3);
+			this->ClientTabControl->Controls->Add(this->tabPage4);
 			this->ClientTabControl->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->ClientTabControl->Location = System::Drawing::Point(0, 0);
 			this->ClientTabControl->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
@@ -736,6 +759,110 @@ namespace ProjetPOOGroupeB {
 			this->textBox10->TabIndex = 19;
 			this->textBox10->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox10_TextChanged);
 			// 
+			// tabPage4
+			// 
+			this->tabPage4->Controls->Add(this->button16);
+			this->tabPage4->Controls->Add(this->button15);
+			this->tabPage4->Controls->Add(this->button14);
+			this->tabPage4->Controls->Add(this->button13);
+			this->tabPage4->Controls->Add(this->button12);
+			this->tabPage4->Controls->Add(this->button11);
+			this->tabPage4->Controls->Add(this->button10);
+			this->tabPage4->Controls->Add(this->button9);
+			this->tabPage4->Controls->Add(this->dataGridView3);
+			this->tabPage4->Location = System::Drawing::Point(8, 39);
+			this->tabPage4->Name = L"tabPage4";
+			this->tabPage4->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage4->Size = System::Drawing::Size(1112, 922);
+			this->tabPage4->TabIndex = 3;
+			this->tabPage4->Text = L"Gestion des STATS";
+			this->tabPage4->UseVisualStyleBackColor = true;
+			// 
+			// button16
+			// 
+			this->button16->Location = System::Drawing::Point(876, 245);
+			this->button16->Name = L"button16";
+			this->button16->Size = System::Drawing::Size(218, 126);
+			this->button16->TabIndex = 20;
+			this->button16->Text = L"Identifier les 10 articles les plus vendus";
+			this->button16->UseVisualStyleBackColor = true;
+			// 
+			// button15
+			// 
+			this->button15->Location = System::Drawing::Point(876, 424);
+			this->button15->Name = L"button15";
+			this->button15->Size = System::Drawing::Size(218, 82);
+			this->button15->TabIndex = 19;
+			this->button15->Text = L"Identifier les 10 articles les moins vendus";
+			this->button15->UseVisualStyleBackColor = true;
+			// 
+			// button14
+			// 
+			this->button14->Location = System::Drawing::Point(828, 547);
+			this->button14->Name = L"button14";
+			this->button14->Size = System::Drawing::Size(266, 317);
+			this->button14->TabIndex = 18;
+			this->button14->Text = L" Simuler des variations de valeurs commerciales pour en déduire la valeur du stoc"
+				L"k";
+			this->button14->UseVisualStyleBackColor = true;
+			// 
+			// button13
+			// 
+			this->button13->Location = System::Drawing::Point(876, 56);
+			this->button13->Name = L"button13";
+			this->button13->Size = System::Drawing::Size(218, 127);
+			this->button13->TabIndex = 17;
+			this->button13->Text = L"Identifier les produitds sous le seuim de réaprovisionnement";
+			this->button13->UseVisualStyleBackColor = true;
+			// 
+			// button12
+			// 
+			this->button12->Location = System::Drawing::Point(393, 547);
+			this->button12->Name = L"button12";
+			this->button12->Size = System::Drawing::Size(285, 129);
+			this->button12->TabIndex = 16;
+			this->button12->Text = L"Calcul du montant des achats ppour un client";
+			this->button12->UseVisualStyleBackColor = true;
+			this->button12->Click += gcnew System::EventHandler(this, &MyForm::button12_Click);
+			// 
+			// button11
+			// 
+			this->button11->Location = System::Drawing::Point(393, 736);
+			this->button11->Name = L"button11";
+			this->button11->Size = System::Drawing::Size(285, 128);
+			this->button11->TabIndex = 15;
+			this->button11->Text = L"Calculer la valeur commerciale du stock";
+			this->button11->UseVisualStyleBackColor = true;
+			this->button11->Click += gcnew System::EventHandler(this, &MyForm::button11_Click);
+			// 
+			// button10
+			// 
+			this->button10->Location = System::Drawing::Point(17, 736);
+			this->button10->Name = L"button10";
+			this->button10->Size = System::Drawing::Size(259, 128);
+			this->button10->TabIndex = 14;
+			this->button10->Text = L"Calculer le chiffre d\'affaire sur un mois en particulier";
+			this->button10->UseVisualStyleBackColor = true;
+			// 
+			// button9
+			// 
+			this->button9->Location = System::Drawing::Point(17, 547);
+			this->button9->Name = L"button9";
+			this->button9->Size = System::Drawing::Size(259, 129);
+			this->button9->TabIndex = 13;
+			this->button9->Text = L"Calculer le panier moyen après remise";
+			this->button9->UseVisualStyleBackColor = true;
+			// 
+			// dataGridView3
+			// 
+			this->dataGridView3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView3->Location = System::Drawing::Point(17, 66);
+			this->dataGridView3->Margin = System::Windows::Forms::Padding(6);
+			this->dataGridView3->Name = L"dataGridView3";
+			this->dataGridView3->RowHeadersWidth = 51;
+			this->dataGridView3->Size = System::Drawing::Size(812, 450);
+			this->dataGridView3->TabIndex = 12;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(12, 25);
@@ -758,6 +885,8 @@ namespace ProjetPOOGroupeB {
 			this->tabPage3->ResumeLayout(false);
 			this->tabPage3->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
+			this->tabPage4->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->EndInit();
 			this->ResumeLayout(false);
 
 		}
