@@ -79,7 +79,7 @@ namespace ProjetPOOGroupeB {
 	private: System::Windows::Forms::TextBox^ textBox4;
 	private: System::Windows::Forms::TextBox^ textBox5;
 	private: System::Windows::Forms::TabPage^ tabPage3;
-	private: System::Windows::Forms::DataGridView^ dgv_enr;
+
 	private: System::Windows::Forms::Label^ searchCustomer;
 	private: System::Windows::Forms::Button^ btn_load;
 	private: System::Windows::Forms::TextBox^ searchTextBox;
@@ -121,15 +121,7 @@ namespace ProjetPOOGroupeB {
 	private: System::Windows::Forms::Button^ button12;
 	private: System::Windows::Forms::Button^ button11;
 	private: System::Windows::Forms::Button^ button10;
-
-
-
-
-
-
-
-
-
+private: System::Windows::Forms::DataGridView^ dgv_enr;
 
 
 
@@ -153,7 +145,6 @@ namespace ProjetPOOGroupeB {
 		{
 			this->ClientTabControl = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
-			this->dgv_enr = (gcnew System::Windows::Forms::DataGridView());
 			this->searchCustomer = (gcnew System::Windows::Forms::Label());
 			this->btn_load = (gcnew System::Windows::Forms::Button());
 			this->searchTextBox = (gcnew System::Windows::Forms::TextBox());
@@ -212,15 +203,16 @@ namespace ProjetPOOGroupeB {
 			this->button10 = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
+			this->dgv_enr = (gcnew System::Windows::Forms::DataGridView());
 			this->ClientTabControl->SuspendLayout();
 			this->tabPage1->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->BeginInit();
 			this->tabPage2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->tabPage3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->tabPage4->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// ClientTabControl
@@ -233,7 +225,7 @@ namespace ProjetPOOGroupeB {
 			this->ClientTabControl->Location = System::Drawing::Point(0, 0);
 			this->ClientTabControl->Name = L"ClientTabControl";
 			this->ClientTabControl->SelectedIndex = 0;
-			this->ClientTabControl->Size = System::Drawing::Size(752, 1051);
+			this->ClientTabControl->Size = System::Drawing::Size(752, 757);
 			this->ClientTabControl->TabIndex = 11;
 			// 
 			// tabPage1
@@ -256,20 +248,10 @@ namespace ProjetPOOGroupeB {
 			this->tabPage1->Location = System::Drawing::Point(4, 25);
 			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage1->Size = System::Drawing::Size(744, 1022);
+			this->tabPage1->Size = System::Drawing::Size(744, 728);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Client";
 			this->tabPage1->UseVisualStyleBackColor = true;
-			// 
-			// dgv_enr
-			// 
-			this->dgv_enr->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgv_enr->Location = System::Drawing::Point(9, 57);
-			this->dgv_enr->Margin = System::Windows::Forms::Padding(4);
-			this->dgv_enr->Name = L"dgv_enr";
-			this->dgv_enr->RowHeadersWidth = 51;
-			this->dgv_enr->Size = System::Drawing::Size(726, 288);
-			this->dgv_enr->TabIndex = 11;
 			// 
 			// searchCustomer
 			// 
@@ -846,11 +828,21 @@ namespace ProjetPOOGroupeB {
 			this->dataGridView3->Size = System::Drawing::Size(541, 288);
 			this->dataGridView3->TabIndex = 12;
 			// 
+			// dgv_enr
+			// 
+			this->dgv_enr->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dgv_enr->Location = System::Drawing::Point(9, 57);
+			this->dgv_enr->Margin = System::Windows::Forms::Padding(4);
+			this->dgv_enr->Name = L"dgv_enr";
+			this->dgv_enr->RowHeadersWidth = 51;
+			this->dgv_enr->Size = System::Drawing::Size(726, 288);
+			this->dgv_enr->TabIndex = 11;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(752, 1051);
+			this->ClientSize = System::Drawing::Size(752, 757);
 			this->Controls->Add(this->ClientTabControl);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
 			this->Margin = System::Windows::Forms::Padding(4);
@@ -861,7 +853,6 @@ namespace ProjetPOOGroupeB {
 			this->ClientTabControl->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
 			this->tabPage1->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->EndInit();
 			this->tabPage2->ResumeLayout(false);
 			this->tabPage2->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
@@ -870,6 +861,7 @@ namespace ProjetPOOGroupeB {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->tabPage4->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr))->EndInit();
 			this->ResumeLayout(false);
 
 		}
