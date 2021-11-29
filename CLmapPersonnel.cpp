@@ -1,5 +1,5 @@
 #include "CLmapPersonnel.h"
-using System::Data::SqlPersonnel::SqlParameter;
+
 
 String^ NS_Comp_Mappage::CLmapPersonnel::Select(void)
 {
