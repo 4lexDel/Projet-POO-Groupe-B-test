@@ -1,5 +1,7 @@
 #include "CLmapPersonnel.h"
+using System::Data::SqlPersonnel::SqlParameter;
 
+/*using System::Data::SqlPersonnel::SqlParameter;*/
 
 String^ NS_Comp_Mappage::CLmapPersonnel::Select(void)
 {
@@ -18,9 +20,8 @@ String^ NS_Comp_Mappage::CLmapPersonnel::Delete(void)
 
 String^ NS_Comp_Mappage::CLmapPersonnel::Update(void)
 {
-	return "";
+	return "UPDATE Employe SET Nom = '" + this->nom + "', Prenom = '" + this->prenom + "', DateEmbauche ='" + this->dateEmbauche + "' ,  WHERE IDPersonnel = '" + this->IDPersonnel + "'; ";
 }
-
 void NS_Comp_Mappage::CLmapPersonnel::setIDPersonnel(String^ value)
 {
 	this->IDPersonnel = value;

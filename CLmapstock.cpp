@@ -1,5 +1,7 @@
 #include "CLmapstock.h"
+
 /*using System::Data::SqlStock::SqlParameter; */
+
 String^ NS_Comp_Mappage::CLmapstock::Select(void)
 { 
     return "SELECT Nom, QuantiteStock, PrixProduit,SeuilReapprovisionnement FROM Article";
@@ -17,9 +19,8 @@ String^ NS_Comp_Mappage::CLmapstock::Delete(void)
 
 String^ NS_Comp_Mappage::CLmapstock::Update(void)
 {
-    return "";
+    return "UPDATE Article SET Nom = '" + this->nom + "', QuantiteStock = '" + this->quantitestock + "', PrixProduit ='" + this->prixproduit + "',SeuilReapprovisionnement='" + this->seuilreapprovisionnement + "'  WHERE Reference = '" + this->reference + "'; ";
 }
-
 void NS_Comp_Mappage::CLmapstock::setreference(String^ val)
 {
     this->reference = val;

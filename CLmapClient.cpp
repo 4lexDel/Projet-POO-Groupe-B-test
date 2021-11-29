@@ -18,7 +18,7 @@ String^ NS_Comp_Mappage::CLmapClient::Delete(void)
 
 String^ NS_Comp_Mappage::CLmapClient::Update(void)
 {
-	return "";
+	return "UPDATE Client SET Nom = '" + this->nom + "', Prenom = '" + this->prenom + "', DateNaissance ='" + this->dateNaissance + "' ,  WHERE numeroClient = '" + this->numeroClient + "'; ";
 }
 
 void NS_Comp_Mappage::CLmapClient::setNumeroClient(String^ value)
