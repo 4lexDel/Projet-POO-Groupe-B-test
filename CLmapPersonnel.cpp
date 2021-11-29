@@ -1,4 +1,5 @@
 #include "CLmapPersonnel.h"
+using System::Data::SqlPersonnel::SqlParameter;
 
 /*using System::Data::SqlPersonnel::SqlParameter;*/
 
