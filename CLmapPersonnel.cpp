@@ -9,12 +9,13 @@ String^ NS_Comp_Mappage::CLmapPersonnel::Select(void)
 
 String^ NS_Comp_Mappage::CLmapPersonnel::Insert(void)
 {
-	return "exec ajouterPersonnel " + "'" + this->nom + "', '" + this->prenom + "', '" + this->dateEmbauche + "',"+ this->Numero+",'"+ this->NomAdresse + "','"+ this->ville+"',"+this->IDSupPersonnel;
+	System::Windows::Forms::MessageBox::Show("exec ajouterPersonnel " + "'" + this->nom + "', '" + this->prenom + "', '" + this->dateEmbauche + "', " + this->IDSupPersonnel + ", " + this->Numero+", '"+ this->NomAdresse + "', '"+ this->ville+"'");
+	return "exec ajouterPersonnel " + "'" + this->nom + "', '" + this->prenom + "', '" + this->dateEmbauche + "'," + this->IDSupPersonnel + "," + this->Numero+",'"+ this->NomAdresse + "','"+ this->ville+"'";
 }
 
 String^ NS_Comp_Mappage::CLmapPersonnel::Delete(void)
 {
-	return "exec supprimerPersonnel " + IDPersonnel;
+	return "exec supprimerEmploye " + IDPersonnel;
 }
 
 String^ NS_Comp_Mappage::CLmapPersonnel::Update(void)
@@ -39,4 +40,24 @@ void NS_Comp_Mappage::CLmapPersonnel::setPrenom(String^ value)
 void NS_Comp_Mappage::CLmapPersonnel::setdateEmbauche(String^ value)
 {
 	this->dateEmbauche = value;
+}
+
+void NS_Comp_Mappage::CLmapPersonnel::setNumero(String^ value)
+{
+	this->Numero = value;
+}
+
+void NS_Comp_Mappage::CLmapPersonnel::setNomAdresse(String^ value)
+{
+	this->NomAdresse = value;
+}
+
+void NS_Comp_Mappage::CLmapPersonnel::setVille(String^ value)
+{
+	this->ville = value;
+}
+
+void NS_Comp_Mappage::CLmapPersonnel::setIDSupPersonnel(String^ value)
+{
+	this->IDSupPersonnel = value;
 }

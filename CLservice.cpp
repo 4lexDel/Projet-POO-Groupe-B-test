@@ -150,7 +150,10 @@ void NS_Comp_Svc::CLservices::ajouterPersonnel(String^nom, String^prenom, String
 	oMappPersonnel->setPrenom(prenom);
 	oMappPersonnel->setdateEmbauche(dateEmbauche);
 
-	//oMappPersonnel->set
+	oMappPersonnel->setNumero(numero);
+	oMappPersonnel->setNomAdresse(adresse);
+	oMappPersonnel->setVille(ville);
+	oMappPersonnel->setIDSupPersonnel(IDSupPersonnel);
 
 	sql2 = this->oMappPersonnel->Insert();
 
