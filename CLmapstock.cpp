@@ -4,7 +4,7 @@
 
 String^ NS_Comp_Mappage::CLmapstock::Select(void)
 { 
-    return "SELECT Nom, QuantiteStock, PrixProduit,SeuilReapprovisionnement FROM Article";
+    return "select A.Reference, Nom, QuantiteStock, PrixProduit, SeuilReapprovisionnement, NomTaxe, PourcentageTaxe from Taxer Tr join Article as A on Tr.Reference = A.Reference join Taxe as Ta on Tr.IDTaxe = Ta.IDTaxe";
 }
 
 String^ NS_Comp_Mappage::CLmapstock::Insert(void)
@@ -46,7 +46,7 @@ void NS_Comp_Mappage::CLmapstock::setseuilreapprovisionnement(String^ val)
     this->seuilreapprovisionnement = val;
 }
 
-/*void NS_Comp_Mappage::CLmapstock::setnomtaxe(String^ val)
+void NS_Comp_Mappage::CLmapstock::setnomtaxe(String^ val)
 {
     this->nomtaxe = val;
 }
@@ -56,5 +56,5 @@ void NS_Comp_Mappage::CLmapstock::setpourcentage(String^ val)
     this->pourcentagetaxe = val;
 }
 
-*/
+
 

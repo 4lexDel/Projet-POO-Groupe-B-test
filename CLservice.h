@@ -26,7 +26,7 @@ namespace NS_Comp_Svc
 		void modifierClient(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
 
 
-		System::Data::DataSet^ selectionnerstock(String^ dataName);
+		System::Data::DataSet^ selectionnerStock(String^ dataName);
 		void ajouterstock(String^, String^, String^, String^);
 		void supprimerstock(String^);
 		void modifierstock(String^ ,String^, String^, String^, String^);

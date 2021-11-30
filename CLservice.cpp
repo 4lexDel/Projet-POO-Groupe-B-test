@@ -65,7 +65,7 @@ void NS_Comp_Svc::CLservices::modifierClient(String^ ID, String^ nom, String^ pr
 
 	oMappClient->setNom(nom);
 	oMappClient->setPrenom(prenom);
-	oMappClient->setPrenom(dateNaissance);
+	oMappClient->setDateNaissance(dateNaissance);
 
 	oMappClient->setNumeroFacturation(numeroFacturation);
 	oMappClient->setNomAdresseFacturation(adresseFacturation);
@@ -84,13 +84,12 @@ void NS_Comp_Svc::CLservices::modifierClient(String^ ID, String^ nom, String^ pr
 //*************STOCK******************
 #pragma region STOCK
 
-System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerstock(String^ dataName)
+System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerStock(String^ dataName)
 {
 	String^ sql1;
 
 	sql1 = oMappstock->Select();
 	return this->oCad->getRows(sql1, dataName);
-
 }
 
 void NS_Comp_Svc::CLservices::ajouterstock(String^ nom, String^ quantitestock, String^ prixproduit, String^ seuilreapprovisionnement)
