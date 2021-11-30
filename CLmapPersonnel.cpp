@@ -4,7 +4,7 @@
 
 String^ NS_Comp_Mappage::CLmapPersonnel::Select(void)
 {
-	return "select E.Nom, E.Prenom, Numero, NomAdresse as Adresse, nomVille as Ville, S.Nom as [Nom supérieur], S.Prenom as [Prenom supérieur] from Employe as E left join Employe as S on E.IDEmploye_EtreDiriger = S.IDEmploye join Adresse as A on A.IDAdresse = E.IDAdresse join Ville as V on V.IDVille = A.IDVille";
+	return "select E.IDEmploye, E.Nom, E.Prenom, Numero, NomAdresse as Adresse, nomVille as Ville, S.Nom as [Nom supérieur], S.Prenom as [Prenom supérieur] from Employe as E left join Employe as S on E.IDEmploye_EtreDiriger = S.IDEmploye join Adresse as A on A.IDAdresse = E.IDAdresse join Ville as V on V.IDVille = A.IDVille";
 }
 
 String^ NS_Comp_Mappage::CLmapPersonnel::Insert(void)

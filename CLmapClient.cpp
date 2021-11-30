@@ -3,12 +3,13 @@ using System::Data::SqlClient::SqlParameter;
 
 String^ NS_Comp_Mappage::CLmapClient::Select(void)
 {
-	return "select Nom, Prenom, Numero, NomAdresse as Adresse, nomVille as Ville from Client as C join Posseder as P on C.NumeroClient = P.NumeroClient join Adresse as A on A.IDAdresse = P.IDAdresse join Ville as V on V.IDVille = A.IDVille";
+	return "select C.NumeroClient, Nom, Prenom, Numero, NomAdresse as Adresse, nomVille as Ville from Client as C join Posseder as P on C.NumeroClient = P.NumeroClient join Adresse as A on A.IDAdresse = P.IDAdresse join Ville as V on V.IDVille = A.IDVille";
 }
 
 String^ NS_Comp_Mappage::CLmapClient::Insert(void)
 {
-	return "INSERT INTO Client (Nom, Prenom, DateNaissance) VALUES('" + this->nom + "','" + this->prenom + "','" + this->dateNaissance+"');";
+	//return "INSERT INTO Client (Nom, Prenom, DateNaissance) VALUES('" + this->nom + "','" + this->prenom + "','" + this->dateNaissance+"');";
+	return "exec ajouterClient '" + this->nom + "','" + this->prenom + "','" + this->dateNaissance + "', " + this->NumeroFacturation + ",'" + this->NomAdresseFacturation + "','" + this->villeFacturation + "', "+ this->NumeroLivraison + ",'" + this->NomAdresseLivraison + "','" + this->villeLivraison + "'";
 }
 
 String^ NS_Comp_Mappage::CLmapClient::Delete(void)

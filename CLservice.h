@@ -7,6 +7,8 @@
 #include "CLmapstock.h"
 #include "CLcad.h"
 
+using System::String;
+
 namespace NS_Comp_Svc
 {
 	ref class CLservices
@@ -18,21 +20,21 @@ namespace NS_Comp_Svc
 		NS_Comp_Mappage::CLmapPersonnel^ oMappPersonnel;
 	public:
 		CLservices(void);
-		System::Data::DataSet^ selectionnerClient(System::String^ dataName);
-		void ajouterClient(System::String^, System::String^, System::String^);
-		void supprimerClient(System::String^);
-		void modifierClient(System::String^, System::String^, System::String^, System::String^);
+		System::Data::DataSet^ selectionnerClient(String^ dataName);
+		void ajouterClient(String^, String^, String^, String^, String^, String^, String^, String^, String^);
+		void supprimerClient(String^);
+		void modifierClient(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);
 
 
-		System::Data::DataSet^ selectionnerstock(System::String^ dataName);
-		void ajouterstock(System::String^, System::String^, System::String^, System::String^);
-		void supprimerstock(System::String^);
-		void modifierstock(System::String^ ,System::String^, System::String^, System::String^, System::String^);
+		System::Data::DataSet^ selectionnerstock(String^ dataName);
+		void ajouterstock(String^, String^, String^, String^);
+		void supprimerstock(String^);
+		void modifierstock(String^ ,String^, String^, String^, String^);
 
 
-		System::Data::DataSet^ selectionnerPersonnel(System::String^ dataName);
-		void ajouterPersonnel(System::String^, System::String^, System::String^);
-		void supprimerPersonnel(System::String^);
-		void modifierPersonnel(System::String^, System::String^, System::String^, System::String^);
+		System::Data::DataSet^ selectionnerPersonnel(String^ dataName);
+		void ajouterPersonnel(String^, String^, String^);
+		void supprimerPersonnel(String^);
+		void modifierPersonnel(String^, String^, String^, String^);
 	};
 }

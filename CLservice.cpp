@@ -14,31 +14,39 @@ NS_Comp_Svc::CLservices::CLservices(void)
 
 //**********CLIENTS*********************
 
-System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerClient(System::String^ dataTableName)
+System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerClient(String^ dataTableName)
 {
-	System::String^ sql;
+	String^ sql;
 
 	sql = oMappClient->Select();
 	return this->oCad->getRows(sql, dataTableName);
 }
 
 
-void NS_Comp_Svc::CLservices::ajouterClient(String^ nom, String^ prenom, String^ dateNaissance)
+void NS_Comp_Svc::CLservices::ajouterClient(String^ nom, String^ prenom, String^ dateNaissance, String^ numeroFacturation, String^ adresseFacturation, String^ villeFacturation, String^ numeroLivraison, String^ adresseLivraison, String^ villeLivraison)
 {
-	System::String^ sql;
+	String^ sql;
 
 	oMappClient->setNom(nom);
 	oMappClient->setPrenom(prenom);
 	oMappClient->setDateNaissance(dateNaissance);
+
+	oMappClient->setNumeroFacturation(numeroFacturation);
+	oMappClient->setNomAdresseFacturation(adresseFacturation);
+	oMappClient->setVilleFacturation(villeFacturation);
+	oMappClient->setNumeroLivraison(numeroLivraison);
+	oMappClient->setNomAdresseLivraison(adresseLivraison);
+	oMappClient->setVilleLivraison(villeLivraison);
+
 
 	sql = this->oMappClient->Insert();
 
 	this->oCad->actionRows(sql);
 }
 
-void NS_Comp_Svc::CLservices::supprimerClient(System::String^ ID)
+void NS_Comp_Svc::CLservices::supprimerClient(String^ ID)
 {
-	System::String^ sql;
+	String^ sql;
 
 	oMappClient->setNumeroClient(ID);
 	//this->oMappTB->setId(int::Parse(ID));
@@ -47,14 +55,23 @@ void NS_Comp_Svc::CLservices::supprimerClient(System::String^ ID)
 	this->oCad->actionRows(sql);
 }
 
-void NS_Comp_Svc::CLservices::modifierClient(System::String^ ID, System::String^ nom, System::String^ prenom, String^ dateNaissance)
+void NS_Comp_Svc::CLservices::modifierClient(String^ ID, String^ nom, String^ prenom, String^ dateNaissance, String^ numeroFacturation, String^ adresseFacturation, String^ villeFacturation, String^ numeroLivraison, String^ adresseLivraison, String^ villeLivraison)
 {
-	System::String^ sql;
+	String^ sql;
 
 	oMappClient->setNumeroClient(ID);
+
 	oMappClient->setNom(nom);
 	oMappClient->setPrenom(prenom);
 	oMappClient->setPrenom(dateNaissance);
+
+	oMappClient->setNumeroFacturation(numeroFacturation);
+	oMappClient->setNomAdresseFacturation(adresseFacturation);
+	oMappClient->setVilleFacturation(villeFacturation);
+	oMappClient->setNumeroLivraison(numeroLivraison);
+	oMappClient->setNomAdresseLivraison(adresseLivraison);
+	oMappClient->setVilleLivraison(villeLivraison);
+
 	sql = oMappClient->Update();
 
 	this->oCad->actionRows(sql);
@@ -62,18 +79,18 @@ void NS_Comp_Svc::CLservices::modifierClient(System::String^ ID, System::String^
 
 //*************STOCK******************
 
-System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerstock(System::String^ dataName)
+System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerstock(String^ dataName)
 {
-	System::String^ sql1;
+	String^ sql1;
 
 	sql1 = oMappstock->Select();
 	return this->oCad->getRows(sql1, dataName);
 
 }
 
-void NS_Comp_Svc::CLservices::ajouterstock(System::String^ nom, System::String^ quantitestock, System::String^ prixproduit, System::String^ seuilreapprovisionnement)
+void NS_Comp_Svc::CLservices::ajouterstock(String^ nom, String^ quantitestock, String^ prixproduit, String^ seuilreapprovisionnement)
 {
-	System::String^ sql1;
+	String^ sql1;
 
 	oMappstock->setnom(nom);
 	oMappstock->setprixproduit(prixproduit);
@@ -85,9 +102,9 @@ void NS_Comp_Svc::CLservices::ajouterstock(System::String^ nom, System::String^ 
 	this->oCad->actionRows(sql1);
 }
 
-void NS_Comp_Svc::CLservices::supprimerstock(System::String^ ID)
+void NS_Comp_Svc::CLservices::supprimerstock(String^ ID)
 {
-	System::String^ sql1;
+	String^ sql1;
 	oMappstock->setreference(ID);
 	//this->oMappTB->setId(int::Parse(ID));
 	sql1 = this->oMappstock->Delete();
@@ -95,9 +112,9 @@ void NS_Comp_Svc::CLservices::supprimerstock(System::String^ ID)
 	this->oCad->actionRows(sql1);
 }
 
-void NS_Comp_Svc::CLservices::modifierstock(System::String^ ID,System::String^nom, System::String^quantitestock, System::String^prixproduit, System::String^seuilreapprovisionnement)
+void NS_Comp_Svc::CLservices::modifierstock(String^ ID,String^nom, String^quantitestock, String^prixproduit, String^seuilreapprovisionnement)
 {
-	System::String^ sql1;
+	String^ sql1;
 
 	oMappClient->setNumeroClient(ID);
 	oMappClient->setNom(nom);
@@ -111,17 +128,17 @@ void NS_Comp_Svc::CLservices::modifierstock(System::String^ ID,System::String^no
 
 //***************PERSONNEL**********************
 
-System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerPersonnel(System::String^ dataName)
+System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerPersonnel(String^ dataName)
 {
-	System::String^ sql2;
+	String^ sql2;
 
 	sql2 = oMappPersonnel->Select();
 	return this->oCad->getRows(sql2, dataName);
 }
 
-void NS_Comp_Svc::CLservices::ajouterPersonnel(System::String^nom, System::String^prenom, System::String^dateEmbauche)
+void NS_Comp_Svc::CLservices::ajouterPersonnel(String^nom, String^prenom, String^dateEmbauche)
 {
-	System::String^ sql2;
+	String^ sql2;
 
 	oMappPersonnel->setNom(nom);
 	oMappPersonnel->setPrenom(prenom);
@@ -132,9 +149,9 @@ void NS_Comp_Svc::CLservices::ajouterPersonnel(System::String^nom, System::Strin
 	this->oCad->actionRows(sql2);
 }
 
-void NS_Comp_Svc::CLservices::supprimerPersonnel(System::String^ID)
+void NS_Comp_Svc::CLservices::supprimerPersonnel(String^ID)
 {
-	System::String^ sql2;
+	String^ sql2;
 
 	oMappPersonnel->setIDPersonnel(ID);
 	//this->oMappTB->setId(int::Parse(ID));
@@ -143,10 +160,11 @@ void NS_Comp_Svc::CLservices::supprimerPersonnel(System::String^ID)
 	this->oCad->actionRows(sql2);
 }
 
-void NS_Comp_Svc::CLservices::modifierPersonnel(System::String^ ID, System::String^ nom, System::String^ prenom, System::String^ dateEmbauche)
+void NS_Comp_Svc::CLservices::modifierPersonnel(String^ ID, String^ nom, String^ prenom, String^ dateEmbauche)
 {
-	System::String^ sql2; 
+	String^ sql2; 
 	oMappPersonnel->setIDPersonnel(ID);
+
 	oMappPersonnel->setNom(nom);
 	oMappPersonnel->setPrenom(prenom);
 	oMappPersonnel->setdateEmbauche(dateEmbauche);
