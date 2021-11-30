@@ -211,7 +211,8 @@ namespace ProjetPOOGroupeB {
 
 	private: System::Windows::Forms::Label^ label43;
 	private: System::Windows::Forms::Label^ label44;
-	private: System::Windows::Forms::ListBox^ listBoxVillePersoUpdate;
+private: System::Windows::Forms::ListBox^ ListBoxVillePersoUpdate;
+
 
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
@@ -224,7 +225,8 @@ namespace ProjetPOOGroupeB {
 	private: System::Windows::Forms::TextBox^ textBoxIDSupPersoUpdate;
 
 	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::ListBox^ listBoxVillePersoInsert;
+private: System::Windows::Forms::ListBox^ ListBoxVillePersoInsert;
+
 
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Label^ label7;
@@ -391,7 +393,7 @@ private: System::Windows::Forms::TabPage^ tabPage11;
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->InsertTabClient = (gcnew System::Windows::Forms::TabPage());
-			this->listBoxVillePersoInsert = (gcnew System::Windows::Forms::ListBox());
+			this->ListBoxVillePersoInsert = (gcnew System::Windows::Forms::ListBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->textBoxAdressePersoInsert = (gcnew System::Windows::Forms::TextBox());
@@ -408,7 +410,7 @@ private: System::Windows::Forms::TabPage^ tabPage11;
 			this->label48 = (gcnew System::Windows::Forms::Label());
 			this->insertButtonPerso = (gcnew System::Windows::Forms::Button());
 			this->UpdateTabClient = (gcnew System::Windows::Forms::TabPage());
-			this->listBoxVillePersoUpdate = (gcnew System::Windows::Forms::ListBox());
+			this->ListBoxVillePersoUpdate = (gcnew System::Windows::Forms::ListBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->updateButtonPerso = (gcnew System::Windows::Forms::Button());
@@ -1093,11 +1095,11 @@ private: System::Windows::Forms::TabPage^ tabPage11;
 			// dgv_enr_client
 			// 
 			this->dgv_enr_client->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgv_enr_client->Location = System::Drawing::Point(9, 11);
-			this->dgv_enr_client->Margin = System::Windows::Forms::Padding(6);
+			this->dgv_enr_client->Location = System::Drawing::Point(7, 7);
+			this->dgv_enr_client->Margin = System::Windows::Forms::Padding(4);
 			this->dgv_enr_client->Name = L"dgv_enr_client";
 			this->dgv_enr_client->RowHeadersWidth = 51;
-			this->dgv_enr_client->Size = System::Drawing::Size(1089, 533);
+			this->dgv_enr_client->Size = System::Drawing::Size(727, 341);
 			this->dgv_enr_client->TabIndex = 11;
 			// 
 			// btn_load_client
@@ -1105,7 +1107,7 @@ private: System::Windows::Forms::TabPage^ tabPage11;
 			this->btn_load_client->Location = System::Drawing::Point(9, 556);
 			this->btn_load_client->Margin = System::Windows::Forms::Padding(6);
 			this->btn_load_client->Name = L"btn_load_client";
-			this->btn_load_client->Size = System::Drawing::Size(1094, 112);
+			this->btn_load_client->Size = System::Drawing::Size(729, 72);
 			this->btn_load_client->TabIndex = 12;
 			this->btn_load_client->Text = L"Charger la base de données";
 			this->btn_load_client->UseVisualStyleBackColor = true;
@@ -1139,7 +1141,7 @@ private: System::Windows::Forms::TabPage^ tabPage11;
 			// 
 			// InsertTabClient
 			// 
-			this->InsertTabClient->Controls->Add(this->listBoxVillePersoInsert);
+			this->InsertTabClient->Controls->Add(this->ListBoxVillePersoInsert);
 			this->InsertTabClient->Controls->Add(this->label6);
 			this->InsertTabClient->Controls->Add(this->label7);
 			this->InsertTabClient->Controls->Add(this->textBoxAdressePersoInsert);
@@ -1164,18 +1166,17 @@ private: System::Windows::Forms::TabPage^ tabPage11;
 			this->InsertTabClient->Text = L"Insert";
 			this->InsertTabClient->UseVisualStyleBackColor = true;
 			// 
-			// listBoxVillePersoInsert
+			// ListBoxVillePersoInsert
 			// 
 			this->listBoxVillePersoInsert->FormattingEnabled = true;
-			this->listBoxVillePersoInsert->ItemHeight = 25;
+			this->listBoxVillePersoInsert->ItemHeight = 16;
 			this->listBoxVillePersoInsert->Items->AddRange(gcnew cli::array< System::Object^  >(12) {
 				L"Nantes", L"Paris", L"Lyon", L"Rouen",
 					L"St-Nazaire", L"Marseille", L"Toulouse", L"Fontainebleau", L"Calais", L"Berck-sur-mer", L"Brest", L"Angers"
 			});
-			this->listBoxVillePersoInsert->Location = System::Drawing::Point(934, 225);
-			this->listBoxVillePersoInsert->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->listBoxVillePersoInsert->Location = System::Drawing::Point(623, 144);
 			this->listBoxVillePersoInsert->Name = L"listBoxVillePersoInsert";
-			this->listBoxVillePersoInsert->Size = System::Drawing::Size(133, 29);
+			this->listBoxVillePersoInsert->Size = System::Drawing::Size(90, 20);
 			this->listBoxVillePersoInsert->TabIndex = 72;
 			// 
 			// label6
@@ -1321,7 +1322,7 @@ private: System::Windows::Forms::TabPage^ tabPage11;
 			// 
 			// UpdateTabClient
 			// 
-			this->UpdateTabClient->Controls->Add(this->listBoxVillePersoUpdate);
+			this->UpdateTabClient->Controls->Add(this->ListBoxVillePersoUpdate);
 			this->UpdateTabClient->Controls->Add(this->label1);
 			this->UpdateTabClient->Controls->Add(this->label2);
 			this->UpdateTabClient->Controls->Add(this->updateButtonPerso);
@@ -1348,18 +1349,17 @@ private: System::Windows::Forms::TabPage^ tabPage11;
 			this->UpdateTabClient->Text = L"Update";
 			this->UpdateTabClient->UseVisualStyleBackColor = true;
 			// 
-			// listBoxVillePersoUpdate
+			// ListBoxVillePersoUpdate
 			// 
 			this->listBoxVillePersoUpdate->FormattingEnabled = true;
-			this->listBoxVillePersoUpdate->ItemHeight = 25;
+			this->listBoxVillePersoUpdate->ItemHeight = 16;
 			this->listBoxVillePersoUpdate->Items->AddRange(gcnew cli::array< System::Object^  >(12) {
 				L"Nantes", L"Paris", L"Lyon", L"Rouen",
 					L"St-Nazaire", L"Marseille", L"Toulouse", L"Fontainebleau", L"Calais", L"Berck-sur-mer", L"Brest", L"Angers"
 			});
-			this->listBoxVillePersoUpdate->Location = System::Drawing::Point(922, 222);
-			this->listBoxVillePersoUpdate->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->listBoxVillePersoUpdate->Location = System::Drawing::Point(615, 142);
 			this->listBoxVillePersoUpdate->Name = L"listBoxVillePersoUpdate";
-			this->listBoxVillePersoUpdate->Size = System::Drawing::Size(133, 29);
+			this->listBoxVillePersoUpdate->Size = System::Drawing::Size(90, 20);
 			this->listBoxVillePersoUpdate->TabIndex = 55;
 			// 
 			// label1
@@ -1567,17 +1567,17 @@ private: System::Windows::Forms::TabPage^ tabPage11;
 			// dgv_enr_personnel
 			// 
 			this->dgv_enr_personnel->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgv_enr_personnel->Location = System::Drawing::Point(14, 80);
-			this->dgv_enr_personnel->Margin = System::Windows::Forms::Padding(6);
+			this->dgv_enr_personnel->Location = System::Drawing::Point(9, 51);
+			this->dgv_enr_personnel->Margin = System::Windows::Forms::Padding(4);
 			this->dgv_enr_personnel->Name = L"dgv_enr_personnel";
 			this->dgv_enr_personnel->RowHeadersWidth = 51;
-			this->dgv_enr_personnel->Size = System::Drawing::Size(1120, 450);
+			this->dgv_enr_personnel->Size = System::Drawing::Size(747, 288);
 			this->dgv_enr_personnel->TabIndex = 0;
 			// 
 			// btn_load_personnel
 			// 
-			this->btn_load_personnel->Location = System::Drawing::Point(9, 542);
-			this->btn_load_personnel->Margin = System::Windows::Forms::Padding(6);
+			this->btn_load_personnel->Location = System::Drawing::Point(6, 347);
+			this->btn_load_personnel->Margin = System::Windows::Forms::Padding(4);
 			this->btn_load_personnel->Name = L"btn_load_personnel";
 			this->btn_load_personnel->Size = System::Drawing::Size(1090, 102);
 			this->btn_load_personnel->TabIndex = 1;
@@ -2135,35 +2135,31 @@ private: System::Windows::Forms::TabPage^ tabPage11;
 	private: System::Void insertButtonPerso_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->oSvc->ajouterPersonnel(this->textBoxNomPersoInsert->Text,
 			this->textBoxPrenomPersoInsert->Text,
-			this->textBoxDateNaissanceClientInsert->Text,
-			this->numericUpDownClientFacInsert->Text,
-			this->textBoxAdresseClientFacInsert->Text,
-			this->ListBoxVilleClientFacInsert->Text,
-			this->numericUpDownClientLivInsert->Text,
-			this->textBoxAdresseClientLivInsert->Text,
-			this->ListBoxVilleClientLivInsert->Text);
-		btn_load_client_Click(sender, e);
+			this->textBoxDateEmbauchePersoInsert->Text,
+			this->numericUpDownPersoInsert->Text,
+			this->textBoxAdressePersoInsert->Text,
+			this->ListBoxVillePersoInsert->Text,
+			this->textBoxIDSupPersoInsert->Text);
+		btn_load_personnel_Click(sender, e);
 		resetInput();
 	}
 
 	private: System::Void deleteButtonPerso_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->oSvc->supprimerClient(this->textBoxIDClientDelete->Text);
-		btn_load_client_Click(sender, e);
+		this->oSvc->supprimerPersonnel(this->textBoxIDPersoDelete->Text);
+		btn_load_personnel_Click(sender, e);
 		resetInput();
 	}
 
 	private: System::Void updateButtonPerso_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->oSvc->modifierClient(this->textBoxIDClientUpdate->Text,
-			this->textBoxNomClientUpdate->Text,
-			this->textBoxPrenomClientUpdate->Text,
-			this->textBoxDateNaissanceClientUpdate->Text,
-			this->numericUpDownClientFacInsert->Text,
-			this->textBoxAdresseClientFacInsert->Text,
-			this->ListBoxVilleClientFacInsert->Text,
-			this->numericUpDownClientLivInsert->Text,
-			this->textBoxAdresseClientLivInsert->Text,
-			this->ListBoxVilleClientLivInsert->Text);
-		btn_load_client_Click(sender, e);
+		this->oSvc->modifierPersonnel(this->textBoxIDPersoUpdate->Text,
+			this->textBoxNomPersoInsert->Text,
+			this->textBoxPrenomPersoInsert->Text,
+			this->textBoxDateEmbauchePersoInsert->Text,
+			this->numericUpDownPersoInsert->Text,
+			this->textBoxAdressePersoInsert->Text,
+			this->ListBoxVillePersoInsert->Text,
+			this->textBoxIDSupPersoInsert->Text);
+		btn_load_personnel_Click(sender, e);
 		resetInput();
 	}
 };
