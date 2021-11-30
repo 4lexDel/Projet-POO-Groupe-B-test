@@ -19,7 +19,8 @@ String^ NS_Comp_Mappage::CLmapClient::Delete(void)
 
 String^ NS_Comp_Mappage::CLmapClient::Update(void)
 {
-	return "UPDATE Client SET Nom = '" + this->nom + "', Prenom = '" + this->prenom + "', DateNaissance ='" + this->dateNaissance + "' ,  WHERE numeroClient = '" + this->numeroClient + "'; ";
+	System::Windows::Forms::MessageBox::Show("exec modifierClient " + this->numeroClient + ", '" + this->nom + "', '" + this->prenom + "', '" + this->dateNaissance + "', " + this->NumeroFacturation + ", '" + this->NomAdresseFacturation + "', '" + this->villeFacturation + "', " + this->NumeroLivraison + ", '" + this->NomAdresseLivraison + "', '" + this->villeLivraison + "'");
+	return "exec modifierClient " + this->numeroClient + ", '" + this->nom + "','" + this->prenom + "','" + this->dateNaissance + "', " + this->NumeroFacturation + ",'" + this->NomAdresseFacturation + "','" + this->villeFacturation + "', " + this->NumeroLivraison + ",'" + this->NomAdresseLivraison + "','" + this->villeLivraison + "'";
 }
 
 void NS_Comp_Mappage::CLmapClient::setNumeroClient(String^ value)

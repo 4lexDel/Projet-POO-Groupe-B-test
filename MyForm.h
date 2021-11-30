@@ -44,7 +44,7 @@ namespace ProjetPOOGroupeB {
 	private: NS_Comp_Svc::CLservices^ oSvc;
 	private: System::Data::DataSet^ oDs;
 
-	private: System::Windows::Forms::TabControl^ ClientTabControl;
+
 	private: System::Windows::Forms::TabPage^ tabPage1;
 	private: System::Windows::Forms::TabPage^ tabPage2;
 	private: System::Windows::Forms::DataGridView^ dgv_enr_personnel;
@@ -267,7 +267,7 @@ namespace ProjetPOOGroupeB {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->ClientTabControl = (gcnew System::Windows::Forms::TabControl());
+			System::Windows::Forms::TabControl^ ClientTabControl;
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->tabControl2 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
@@ -392,7 +392,8 @@ namespace ProjetPOOGroupeB {
 			this->button10 = (gcnew System::Windows::Forms::Button());
 			this->button9 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
-			this->ClientTabControl->SuspendLayout();
+			ClientTabControl = (gcnew System::Windows::Forms::TabControl());
+			ClientTabControl->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->tabControl2->SuspendLayout();
 			this->tabPage5->SuspendLayout();
@@ -419,16 +420,16 @@ namespace ProjetPOOGroupeB {
 			// 
 			// ClientTabControl
 			// 
-			this->ClientTabControl->Controls->Add(this->tabPage1);
-			this->ClientTabControl->Controls->Add(this->tabPage2);
-			this->ClientTabControl->Controls->Add(this->tabPage3);
-			this->ClientTabControl->Controls->Add(this->tabPage4);
-			this->ClientTabControl->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->ClientTabControl->Location = System::Drawing::Point(0, 0);
-			this->ClientTabControl->Name = L"ClientTabControl";
-			this->ClientTabControl->SelectedIndex = 0;
-			this->ClientTabControl->Size = System::Drawing::Size(752, 958);
-			this->ClientTabControl->TabIndex = 11;
+			ClientTabControl->Controls->Add(this->tabPage1);
+			ClientTabControl->Controls->Add(this->tabPage2);
+			ClientTabControl->Controls->Add(this->tabPage3);
+			ClientTabControl->Controls->Add(this->tabPage4);
+			ClientTabControl->Dock = System::Windows::Forms::DockStyle::Fill;
+			ClientTabControl->Location = System::Drawing::Point(0, 0);
+			ClientTabControl->Name = L"ClientTabControl";
+			ClientTabControl->SelectedIndex = 0;
+			ClientTabControl->Size = System::Drawing::Size(752, 834);
+			ClientTabControl->TabIndex = 11;
 			// 
 			// tabPage1
 			// 
@@ -438,7 +439,7 @@ namespace ProjetPOOGroupeB {
 			this->tabPage1->Location = System::Drawing::Point(4, 25);
 			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage1->Size = System::Drawing::Size(744, 929);
+			this->tabPage1->Size = System::Drawing::Size(744, 805);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Client";
 			this->tabPage1->UseVisualStyleBackColor = true;
@@ -1709,15 +1710,15 @@ namespace ProjetPOOGroupeB {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(752, 958);
-			this->Controls->Add(this->ClientTabControl);
+			this->ClientSize = System::Drawing::Size(752, 834);
+			this->Controls->Add(ClientTabControl);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Recherche client";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
-			this->ClientTabControl->ResumeLayout(false);
+			ClientTabControl->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
 			this->tabControl2->ResumeLayout(false);
 			this->tabPage5->ResumeLayout(false);
@@ -1809,12 +1810,12 @@ namespace ProjetPOOGroupeB {
 			this->textBoxNomClientUpdate->Text,
 			this->textBoxPrenomClientUpdate->Text,
 			this->textBoxDateNaissanceClientUpdate->Text,
-			this->numericUpDownClientFacInsert->Text,
-			this->textBoxAdresseClientFacInsert->Text,
-			this->ListBoxVilleClientFacInsert->Text,
-			this->numericUpDownClientLivInsert->Text,
-			this->textBoxAdresseClientLivInsert->Text,
-			this->ListBoxVilleClientLivInsert->Text);
+			this->numericUpDownClientFacUpdate->Text,
+			this->textBoxAdresseClientFacUpdate->Text,
+			this->ListBoxVilleClientFacUpdate->Text,
+			this->numericUpDownClientLivUpdate->Text,
+			this->textBoxAdresseClientLivUpdate->Text,
+			this->ListBoxVilleClientLivUpdate->Text);
 		btn_load_client_Click(sender, e);
 		resetInput();
 	}
@@ -1839,13 +1840,13 @@ namespace ProjetPOOGroupeB {
 
 	private: System::Void updateButtonPerso_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->oSvc->modifierPersonnel(this->textBoxIDPersoUpdate->Text,
-			this->textBoxNomPersoInsert->Text,
-			this->textBoxPrenomPersoInsert->Text,
-			this->textBoxDateEmbauchePersoInsert->Text,
-			this->numericUpDownPersoInsert->Text,
-			this->textBoxAdressePersoInsert->Text,
-			this->ListBoxVillePersoInsert->Text,
-			this->textBoxIDSupPersoInsert->Text);
+			this->textBoxNomPersoUpdate->Text,
+			this->textBoxPrenomPersoUpdate->Text,
+			this->textBoxDateEmbauchePersoUpdate->Text,
+			this->numericUpDownPersoUpdate->Text,
+			this->textBoxAdressePersoUpdate->Text,
+			this->ListBoxVillePersoUpdate->Text,
+			this->textBoxIDSupPersoUpdate->Text);
 		btn_load_personnel_Click(sender, e);
 		resetInput();
 	}

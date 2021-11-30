@@ -9,7 +9,6 @@ String^ NS_Comp_Mappage::CLmapPersonnel::Select(void)
 
 String^ NS_Comp_Mappage::CLmapPersonnel::Insert(void)
 {
-	System::Windows::Forms::MessageBox::Show("exec ajouterPersonnel " + "'" + this->nom + "', '" + this->prenom + "', '" + this->dateEmbauche + "', " + this->IDSupPersonnel + ", " + this->Numero+", '"+ this->NomAdresse + "', '"+ this->ville+"'");
 	return "exec ajouterPersonnel " + "'" + this->nom + "', '" + this->prenom + "', '" + this->dateEmbauche + "'," + this->IDSupPersonnel + "," + this->Numero+",'"+ this->NomAdresse + "','"+ this->ville+"'";
 }
 
@@ -20,7 +19,8 @@ String^ NS_Comp_Mappage::CLmapPersonnel::Delete(void)
 
 String^ NS_Comp_Mappage::CLmapPersonnel::Update(void)
 {
-	return "UPDATE Employe SET Nom = '" + this->nom + "', Prenom = '" + this->prenom + "', DateEmbauche ='" + this->dateEmbauche + "' ,  WHERE IDPersonnel = '" + this->IDPersonnel + "'; ";
+	//System::Windows::Forms::MessageBox::Show("exec modifierPersonnel " + this->IDPersonnel + ",'" + this->nom + "', '" + this->prenom + "', '" + this->dateEmbauche + "'," + this->IDSupPersonnel + "," + this->Numero + ",'" + this->NomAdresse + "','" + this->ville + "'");
+	return "exec modifierPersonnel " +this->IDPersonnel+ ",'" + this->nom + "', '" + this->prenom + "', '" + this->dateEmbauche + "'," + this->IDSupPersonnel + "," + this->Numero + ",'" + this->NomAdresse + "','" + this->ville + "'";
 }
 void NS_Comp_Mappage::CLmapPersonnel::setIDPersonnel(String^ value)
 {
