@@ -3,7 +3,7 @@ using System::Data::SqlClient::SqlParameter;
 
 String^ NS_Comp_Mappage::CLmapClient::Select(void)
 {
-	return "SELECT Nom, Prenom, DateNaissance FROM Client";
+	return "select Nom, Prenom, Numero, NomAdresse as Adresse, nomVille as Ville from Client as C join Posseder as P on C.NumeroClient = P.NumeroClient join Adresse as A on A.IDAdresse = P.IDAdresse join Ville as V on V.IDVille = A.IDVille";
 }
 
 String^ NS_Comp_Mappage::CLmapClient::Insert(void)
@@ -13,7 +13,7 @@ String^ NS_Comp_Mappage::CLmapClient::Insert(void)
 
 String^ NS_Comp_Mappage::CLmapClient::Delete(void)
 {
-	return "DELETE FROM Client WHERE NumeroClient = " + numeroClient;
+	return "exec supprimerClient " + numeroClient;
 }
 
 String^ NS_Comp_Mappage::CLmapClient::Update(void)
@@ -39,4 +39,34 @@ void NS_Comp_Mappage::CLmapClient::setPrenom(String^ value)
 void NS_Comp_Mappage::CLmapClient::setDateNaissance(String^ value)
 {
 	this->dateNaissance = value;
+}
+
+void NS_Comp_Mappage::CLmapClient::setNumeroFacturation(String^ value)
+{
+	this->NumeroFacturation = value;
+}
+
+void NS_Comp_Mappage::CLmapClient::setNomAdresseFacturation(String^ value)
+{
+	this->NomAdresseFacturation = value;
+}
+
+void NS_Comp_Mappage::CLmapClient::setVilleFacturation(String^ value)
+{
+	this->villeFacturation = value;
+}
+
+void NS_Comp_Mappage::CLmapClient::setNumeroLivraison(String^ value)
+{
+	this->NumeroLivraison = value;
+}
+
+void NS_Comp_Mappage::CLmapClient::setNomAdresseLivraison(String^ value)
+{
+	this->NomAdresseLivraison = value;
+}
+
+void NS_Comp_Mappage::CLmapClient::setVilleLivraison(String^ value)
+{
+	this->villeLivraison = value;
 }
