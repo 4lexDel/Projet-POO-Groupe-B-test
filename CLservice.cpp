@@ -14,6 +14,8 @@ NS_Comp_Svc::CLservices::CLservices(void)
 
 //**********CLIENTS*********************
 
+#pragma region CLIENTS
+
 System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerClient(String^ dataTableName)
 {
 	String^ sql;
@@ -77,7 +79,10 @@ void NS_Comp_Svc::CLservices::modifierClient(String^ ID, String^ nom, String^ pr
 	this->oCad->actionRows(sql);
 }
 
+#pragma endregion
+
 //*************STOCK******************
+#pragma region STOCK
 
 System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerstock(String^ dataName)
 {
@@ -125,6 +130,7 @@ void NS_Comp_Svc::CLservices::modifierstock(String^ ID,String^nom, String^quanti
 	this->oCad->actionRows(sql1);
 }
 
+#pragma endregion
 
 //***************PERSONNEL**********************
 
@@ -136,13 +142,15 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerPersonnel(String^ da
 	return this->oCad->getRows(sql2, dataName);
 }
 
-void NS_Comp_Svc::CLservices::ajouterPersonnel(String^nom, String^prenom, String^dateEmbauche)
+void NS_Comp_Svc::CLservices::ajouterPersonnel(String^nom, String^prenom, String^dateEmbauche, String^ numero, String^ adresse, String^ ville, String^ IDSupPersonnel)
 {
 	String^ sql2;
 
 	oMappPersonnel->setNom(nom);
 	oMappPersonnel->setPrenom(prenom);
 	oMappPersonnel->setdateEmbauche(dateEmbauche);
+
+	//oMappPersonnel->set
 
 	sql2 = this->oMappPersonnel->Insert();
 
@@ -160,7 +168,7 @@ void NS_Comp_Svc::CLservices::supprimerPersonnel(String^ID)
 	this->oCad->actionRows(sql2);
 }
 
-void NS_Comp_Svc::CLservices::modifierPersonnel(String^ ID, String^ nom, String^ prenom, String^ dateEmbauche)
+void NS_Comp_Svc::CLservices::modifierPersonnel(String^ ID, String^ nom, String^ prenom, String^ dateEmbauche, String^ numero, String^ adresse, String^ ville, String^ IDSupPersonnel)
 {
 	String^ sql2; 
 	oMappPersonnel->setIDPersonnel(ID);
@@ -168,6 +176,12 @@ void NS_Comp_Svc::CLservices::modifierPersonnel(String^ ID, String^ nom, String^
 	oMappPersonnel->setNom(nom);
 	oMappPersonnel->setPrenom(prenom);
 	oMappPersonnel->setdateEmbauche(dateEmbauche);
+
+	oMappPersonnel->setNumero(numero);
+	oMappPersonnel->setNomAdresse(adresse);
+	oMappPersonnel->setVille(ville);
+
+	oMappPersonnel->setIDSupPersonnel(IDSupPersonnel);
 
 	sql2 = oMappPersonnel->Update();
 

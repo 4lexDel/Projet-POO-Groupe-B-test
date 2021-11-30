@@ -9,12 +9,12 @@ String^ NS_Comp_Mappage::CLmapPersonnel::Select(void)
 
 String^ NS_Comp_Mappage::CLmapPersonnel::Insert(void)
 {
-	return "INSERT INTO Client (Nom, Prenom, DateEmbauche) VALUES('" + this->nom + "','" + this->prenom + "','" + this->dateEmbauche + "');";
+	return "exec ajouterPersonnel " + "'" + this->nom + "', '" + this->prenom + "', '" + this->dateEmbauche + "',"+ this->Numero+",'"+ this->NomAdresse + "','"+ this->ville+"',"+this->IDSupPersonnel;
 }
 
 String^ NS_Comp_Mappage::CLmapPersonnel::Delete(void)
 {
-	return "DELETE FROM Client WHERE IDPersonnel = " + IDPersonnel;
+	return "exec supprimerPersonnel " + IDPersonnel;
 }
 
 String^ NS_Comp_Mappage::CLmapPersonnel::Update(void)

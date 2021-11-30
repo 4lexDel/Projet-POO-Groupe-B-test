@@ -16,6 +16,12 @@ namespace NS_Comp_Mappage
 		String^ prenom;
 		String^ dateEmbauche;
 
+		String^ Numero;
+		String^ NomAdresse;
+		String^ ville;
+
+		String^ IDSupPersonnel;
+
 	public:
 		String^ Select(void) new;
 		String^ Insert(void) new;
@@ -26,5 +32,10 @@ namespace NS_Comp_Mappage
 		void setNom(String^);
 		void setPrenom(String^);
 		void setdateEmbauche(String^);
+
+		void setNumero(String^);
+		void setNomAdresse(String^);
+		void setVille(String^);
+		void setIDSupPersonnel(String^);
 	};
 }

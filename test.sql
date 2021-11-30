@@ -1,1 +1,1 @@
-﻿select * from Client
+﻿select * from Employe

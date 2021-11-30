@@ -33,8 +33,8 @@ namespace NS_Comp_Svc
 
 
 		System::Data::DataSet^ selectionnerPersonnel(String^ dataName);
-		void ajouterPersonnel(String^, String^, String^);
+		void ajouterPersonnel(String^, String^, String^, String^, String^, String^, String^);
 		void supprimerPersonnel(String^);
-		void modifierPersonnel(String^, String^, String^, String^);
+		void modifierPersonnel(String^, String^, String^, String^, String^, String^, String^, String^);
 	};
 }
