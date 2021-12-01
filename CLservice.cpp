@@ -116,12 +116,12 @@ void NS_Comp_Svc::CLservices::supprimerstock(String^ ID)
 	this->oCad->actionRows(sql1);
 }
 
-void NS_Comp_Svc::CLservices::modifierstock(String^ ID,String^nom, String^quantitestock, String^prixproduit, String^seuilreapprovisionnement)
+void NS_Comp_Svc::CLservices::modifierstock(String^ ID, String^quantitestock, String^prixproduit, String^seuilreapprovisionnement)
 {
 	String^ sql1;
 
 	oMappClient->setNumeroClient(ID);
-	oMappClient->setNom(nom);
+	oMappClient->setNom(seuilreapprovisionnement);
 	oMappClient->setPrenom(quantitestock);
 	oMappClient->setPrenom(prixproduit);
 	sql1 = oMappClient->Update();

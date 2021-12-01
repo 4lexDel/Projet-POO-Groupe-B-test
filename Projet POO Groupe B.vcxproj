@@ -124,6 +124,7 @@
   <ItemGroup>
     <ClCompile Include="CLcad.cpp" />
     <ClCompile Include="CLmapClient.cpp" />
+    <ClCompile Include="CLmappCommande.cpp" />
     <ClCompile Include="CLmapStat.cpp" />
     <ClCompile Include="CLmapstock.cpp" />
     <ClCompile Include="CLmapTB.cpp" />
@@ -135,7 +136,6 @@
   <ItemGroup>
     <ClInclude Include="CLcad.h" />
     <ClInclude Include="CLmapClient.h" />
-    <ClInclude Include="CLmapStat.h" />
     <ClInclude Include="CLmapstock.h" />
     <ClInclude Include="CLmapTB.h" />
     <ClInclude Include="CLservice.h" />
