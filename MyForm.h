@@ -2414,8 +2414,8 @@ private: System::Void updateButtonStock_Click(System::Object^ sender, System::Ev
 
 		btn_load_stock_Click(sender, e);
 		resetInput();
-
 }
+
 private: System::Void deleteButtonStock_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->oSvc->supprimerstock(this->textBoxRefCComDelete->Text);
 	btn_load_stock_Click(sender, e);
