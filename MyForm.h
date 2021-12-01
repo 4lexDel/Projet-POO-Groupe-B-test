@@ -831,6 +831,7 @@ private: System::Windows::Forms::Label^ label11;
 			this->textBoxNomClientInsert->Name = L"textBoxNomClientInsert";
 			this->textBoxNomClientInsert->Size = System::Drawing::Size(326, 31);
 			this->textBoxNomClientInsert->TabIndex = 29;
+			this->textBoxNomClientInsert->TextChanged += gcnew System::EventHandler(this, &MyForm::textBoxNomClientInsert_TextChanged);
 			// 
 			// label43
 			// 
@@ -1170,12 +1171,13 @@ private: System::Windows::Forms::Label^ label11;
 			// dgv_enr_client
 			// 
 			this->dgv_enr_client->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgv_enr_client->Location = System::Drawing::Point(10, 12);
+			this->dgv_enr_client->Location = System::Drawing::Point(7, 0);
 			this->dgv_enr_client->Margin = System::Windows::Forms::Padding(6);
 			this->dgv_enr_client->Name = L"dgv_enr_client";
 			this->dgv_enr_client->RowHeadersWidth = 51;
 			this->dgv_enr_client->Size = System::Drawing::Size(1090, 533);
 			this->dgv_enr_client->TabIndex = 11;
+			this->dgv_enr_client->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgv_enr_client_CellContentClick);
 			// 
 			// btn_load_client
 			// 
@@ -1784,13 +1786,14 @@ private: System::Windows::Forms::Label^ label11;
 			// 
 			// insertButtonStock
 			// 
-			this->insertButtonStock->Location = System::Drawing::Point(830, 421);
+			this->insertButtonStock->Location = System::Drawing::Point(830, 424);
 			this->insertButtonStock->Margin = System::Windows::Forms::Padding(6);
 			this->insertButtonStock->Name = L"insertButtonStock";
 			this->insertButtonStock->Size = System::Drawing::Size(246, 71);
 			this->insertButtonStock->TabIndex = 2;
 			this->insertButtonStock->Text = L"INSERT";
 			this->insertButtonStock->UseVisualStyleBackColor = true;
+			this->insertButtonStock->Click += gcnew System::EventHandler(this, &MyForm::insertButtonStock_Click);
 			// 
 			// tabPage10
 			// 
@@ -1839,6 +1842,7 @@ private: System::Windows::Forms::Label^ label11;
 			this->updateButtonStock->TabIndex = 74;
 			this->updateButtonStock->Text = L"UPDATE";
 			this->updateButtonStock->UseVisualStyleBackColor = true;
+			this->updateButtonStock->Click += gcnew System::EventHandler(this, &MyForm::updateButtonStock_Click);
 			// 
 			// label45
 			// 
@@ -2490,16 +2494,32 @@ private: System::Windows::Forms::Label^ label11;
 		this->dgv_enr_stock->DataSource = this->oDs;
 		this->dgv_enr_stock->DataMember = "C";
 	}
-private: System::Void textBoxDateEmbauchePersoInsert_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void textBoxDateLivrComInsert_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void btn_load_commande_Click(System::Object^ sender, System::EventArgs^ e) {
+/*private: System::Void btn_load_commande_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->dgv_enr_commande->Refresh();
-	/*this->oDs = this->oSvc->selectionnerClient("A");
-	this->oDs = this->oSvc->*/
+	//this->oDs = this->oSvc->selectionnerClient("A");
+	//this->oDs = this->oSvc->
 	this->dgv_enr_commande->DataSource = this->oDs;
 	this->dgv_enr_commande->DataMember = "A";
+}*/
+private: System::Void insertButtonStock_Click(System::Object^ sender, System::EventArgs^ e) {
+	    this->oSvc->ajouterstock(
+		this->textBoxNomStockInsert->Text,
+		this->textBoxQuantSStockInsert->Text,
+		this->textBoxPrixProStockInsert->Text,
+		this->textBoxSeuilReapStockInsert->Text);
+
+		btn_load_stock_Click(sender, e);
+	resetInput();
+}
+private: System::Void updateButtonStock_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->oSvc->modifierStock(this->textBoxRefStockUpdate->Text,
+		this->textBoxQuantSStockUpdate->Text,
+		this->textBoxPrixProStockUpdate->Text,
+		this->textBoxSeuilReapStockUpdate->Text,
+	);
+	btn_load_client_Click(sender, e);
+	resetInput();
+
 }
 };
 }
