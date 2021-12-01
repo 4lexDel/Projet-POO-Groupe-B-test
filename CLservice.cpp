@@ -84,7 +84,7 @@ void NS_Comp_Svc::CLservices::modifierClient(String^ ID, String^ nom, String^ pr
 //*************STOCK******************
 #pragma region STOCK
 
-System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerStock(String^ dataName)
+System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerstock(String^ dataName)
 {
 	String^ sql1;
 
@@ -120,11 +120,11 @@ void NS_Comp_Svc::CLservices::modifierstock(String^ ID, String^quantitestock, St
 {
 	String^ sql1;
 
-	oMappClient->setNumeroClient(ID);
-	oMappClient->setNom(seuilreapprovisionnement);
-	oMappClient->setPrenom(quantitestock);
-	oMappClient->setPrenom(prixproduit);
-	sql1 = oMappClient->Update();
+	oMappstock->setreference(ID);
+	oMappstock->setseuilreapprovisionnement(seuilreapprovisionnement);
+	oMappstock->setquantitestock(quantitestock);
+	oMappstock->setprixproduit(prixproduit);
+	sql1 = oMappstock->Update();
 
 	this->oCad->actionRows(sql1);
 }

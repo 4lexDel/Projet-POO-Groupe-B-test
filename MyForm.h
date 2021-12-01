@@ -1939,6 +1939,7 @@ private: System::Windows::Forms::Label^ label11;
 			this->deleteButtonStock->TabIndex = 3;
 			this->deleteButtonStock->Text = L"DELETE";
 			this->deleteButtonStock->UseVisualStyleBackColor = true;
+			this->deleteButtonStock->Click += gcnew System::EventHandler(this, &MyForm::deleteButtonStock_Click);
 			// 
 			// dgv_enr_stock
 			// 
@@ -2490,17 +2491,11 @@ private: System::Windows::Forms::Label^ label11;
 
 	private: System::Void btn_load_stock_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->dgv_enr_stock->Refresh();
-		this->oDs = this->oSvc->selectionnerStock("C");
+		this->oDs = this->oSvc->selectionnerstock("C");
 		this->dgv_enr_stock->DataSource = this->oDs;
 		this->dgv_enr_stock->DataMember = "C";
 	}
-/*private: System::Void btn_load_commande_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->dgv_enr_commande->Refresh();
-	//this->oDs = this->oSvc->selectionnerClient("A");
-	//this->oDs = this->oSvc->
-	this->dgv_enr_commande->DataSource = this->oDs;
-	this->dgv_enr_commande->DataMember = "A";
-}*/
+
 private: System::Void insertButtonStock_Click(System::Object^ sender, System::EventArgs^ e) {
 	    this->oSvc->ajouterstock(
 		this->textBoxNomStockInsert->Text,
@@ -2509,17 +2504,22 @@ private: System::Void insertButtonStock_Click(System::Object^ sender, System::Ev
 		this->textBoxSeuilReapStockInsert->Text);
 
 		btn_load_stock_Click(sender, e);
-	resetInput();
+		resetInput();
 }
 private: System::Void updateButtonStock_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->oSvc->modifierStock(this->textBoxRefStockUpdate->Text,
+	this->oSvc->modifierstock(this->textBoxRefStockUpdate->Text,
 		this->textBoxQuantSStockUpdate->Text,
 		this->textBoxPrixProStockUpdate->Text,
-		this->textBoxSeuilReapStockUpdate->Text,
-	);
-	btn_load_client_Click(sender, e);
-	resetInput();
+		this->textBoxSeuilReapStockUpdate->Text);
 
+		btn_load_stock_Click(sender, e);
+		resetInput();
+
+}
+private: System::Void deleteButtonStock_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->oSvc->supprimerstock(this->textBoxRefCComDelete->Text);
+	btn_load_stock_Click(sender, e);
+	resetInput();
 }
 };
 }
