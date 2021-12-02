@@ -1,6 +1,5 @@
 //MAPPING = MIDDLEWARE
 #pragma once
-#include "CLmapTB.h"
 
 using System::String;
 

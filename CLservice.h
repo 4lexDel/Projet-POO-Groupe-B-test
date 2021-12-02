@@ -1,6 +1,5 @@
 //CLservice.h********************************************************************************
 #pragma once
-#include "CLmapTB.h"
 
 #include "CLmapClient.h"
 #include "CLmapPersonnel.h"
@@ -45,6 +44,9 @@ namespace NS_Comp_Svc
 		void ajouterCommande(String^ IDClient, String^ dateLivraison);
 		void supprimerCommande(String^ IDCommande);
 		void modifierCommande(String^ IDCommande, String^ dateLivraison);
+			
+		void ajouterPanier(String^ IDCommande, String^ nomArticle, String^ quantite, String^ couleur);
+		void supprimerPanier(String^ IDCommande, String^ IDArticle);
 
 		System::Data::DataSet^ calculerPanierMoyen(String^ dataName);
 		System::Data::DataSet^ calculerCAParMois(String^ dataName, String^ mois);
@@ -56,5 +58,7 @@ namespace NS_Comp_Svc
 		System::Data::DataSet^ calculerValeurAchatStock(String^ dataName);
 		System::Data::DataSet^ calculerBenefice(String^ dataName);
 		System::Data::DataSet^ simulerValeurCommerciale(String^ dataName, String^ TVA, String^ marge, String^ demarque, String^ remise);
+	
+		System::Data::DataSet^ selectionnerNomArticle(String^ dataName);
 	};
 }

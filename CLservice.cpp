@@ -237,6 +237,31 @@ void NS_Comp_Svc::CLservices::modifierCommande(String^ IDCommande, String^ dateL
 	this->oCad->actionRows(sql2);
 }
 
+void NS_Comp_Svc::CLservices::ajouterPanier(String^ IDCommande, String^ nomArticle, String^ quantite, String^ couleur)
+{
+	String^ sql2;
+
+	oMappCommande->setRefCommande(IDCommande);
+	oMappCommande->setNomArticle(nomArticle);
+	oMappCommande->setQuantite(quantite);
+	oMappCommande->setCouleur(couleur);
+	sql2 = this->oMappCommande->ajouterPanier();
+
+	this->oCad->actionRows(sql2);
+}
+
+void NS_Comp_Svc::CLservices::supprimerPanier(String^ IDCommande, String^ IDArticle)
+{
+	String^ sql2;
+
+	oMappCommande->setRefCommande(IDCommande);
+	oMappCommande->setIDArticle(IDArticle);
+
+	sql2 = this->oMappCommande->supprimerPanier();
+
+	this->oCad->actionRows(sql2);
+}
+
 System::Data::DataSet^ NS_Comp_Svc::CLservices::calculerPanierMoyen(String^ dataName)
 {
 	String^ sql;
@@ -321,5 +346,12 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::simulerValeurCommerciale(String^
 	oMappStat->setRemise(remise);
 
 	sql = oMappStat->simulerValeurCommerciale();
+	return this->oCad->getRows(sql, dataName);
+}
+
+System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerNomArticle(String^ dataName)
+{
+	String^ sql = "select Nom from Article";
+
 	return this->oCad->getRows(sql, dataName);
 }
