@@ -1,4 +1,4 @@
-﻿--exec calculerPanierMoyen
+﻿exec calculerPanierMoyen
 
 --exec calculerCAParMois 5
 

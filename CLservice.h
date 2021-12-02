@@ -7,6 +7,7 @@
 #include "CLmapstock.h"
 #include "CLcad.h"
 #include "CLmappCommande.h"
+#include "CLmapStat.h"
 
 using System::String;
 
@@ -20,6 +21,7 @@ namespace NS_Comp_Svc
 		NS_Comp_Mappage::CLmapstock^ oMappstock;
 		NS_Comp_Mappage::CLmapPersonnel^ oMappPersonnel;
 		NS_Comp_Mappage::CLmappCommande^ oMappCommande;
+		NS_Comp_Mappage::CLmapStat^ oMappStat;
 	public:
 		CLservices(void);
 		System::Data::DataSet^ selectionnerClient(String^ dataName);
@@ -39,10 +41,22 @@ namespace NS_Comp_Svc
 		void supprimerPersonnel(String^);
 		void modifierPersonnel(String^, String^, String^, String^, String^, String^, String^, String^);
 
+		System::Data::DataSet^ selectionnerCommande(String^ dataName, String^ IDClient);
 		/*CLservices(void);
 		System::Data::DataSet^ selectionnerCommande(String^ dataName);
 		void ajouterCommande(String^, String^, String^, String^, String^, String^, String^, String^, String^);
 		void supprimerCommande(String^);
 		void modifierCommande(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);*/
+
+		System::Data::DataSet^ calculerPanierMoyen(String^ dataName);
+		System::Data::DataSet^ calculerCAParMois(String^ dataName, String^ mois);
+		System::Data::DataSet^ articleSousSeuil(String^ dataName);
+		System::Data::DataSet^ calculerMontantTotalClient(String^ dataName, String^ IDClient);
+		System::Data::DataSet^ articlePlusVendus(String^ dataName);
+		System::Data::DataSet^ articleMoinsVendus(String^ dataName);
+		System::Data::DataSet^ calculerValeurCommercialStock(String^ dataName);
+		System::Data::DataSet^ calculerValeurAchatStock(String^ dataName);
+		System::Data::DataSet^ calculerBenefice(String^ dataName);
+		System::Data::DataSet^ simulerValeurCommerciale(String^ dataName, String^ TVA, String^ marge, String^ demarque, String^ remise);
 	};
 }

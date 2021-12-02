@@ -106,15 +106,26 @@ namespace ProjetPOOGroupeB {
 
 
 	private: System::Windows::Forms::TabPage^ tabPage4;
-	private: System::Windows::Forms::Button^ button9;
-	private: System::Windows::Forms::DataGridView^ dataGridView3;
-	private: System::Windows::Forms::Button^ button16;
-	private: System::Windows::Forms::Button^ button15;
-	private: System::Windows::Forms::Button^ button14;
-	private: System::Windows::Forms::Button^ button13;
-	private: System::Windows::Forms::Button^ button12;
-	private: System::Windows::Forms::Button^ button11;
-	private: System::Windows::Forms::Button^ button10;
+	private: System::Windows::Forms::Button^ panierMoyenButton;
+
+	private: System::Windows::Forms::DataGridView^ dgv_enr_stat;
+	private: System::Windows::Forms::Button^ articlePlusVendusButton;
+	private: System::Windows::Forms::Button^ articleMoinsVendusButton;
+	private: System::Windows::Forms::Button^ simulationButton;
+
+
+
+
+	private: System::Windows::Forms::Button^ seuilButton;
+	private: System::Windows::Forms::Button^ achatButton;
+private: System::Windows::Forms::Button^ valeurComStockButton;
+
+
+
+	private: System::Windows::Forms::Button^ CAButton;
+
+
+
 	private: System::Windows::Forms::DataGridView^ dgv_enr_client;
 	private: System::Windows::Forms::TabControl^ tabControl1;
 	private: System::Windows::Forms::TabPage^ InsertTabClient;
@@ -256,16 +267,16 @@ namespace ProjetPOOGroupeB {
 	private: System::Windows::Forms::Label^ label52;
 	private: System::Windows::Forms::Label^ label66;
 	private: System::Windows::Forms::Label^ label53;
-private: System::Windows::Forms::TextBox^ textBoxPrixProStockInsert;
+	private: System::Windows::Forms::TextBox^ textBoxPrixProStockInsert;
 
-private: System::Windows::Forms::TextBox^ textBoxQuantSStockInsert;
-private: System::Windows::Forms::TextBox^ textBoxSeuilReapStockInsert;
+	private: System::Windows::Forms::TextBox^ textBoxQuantSStockInsert;
+	private: System::Windows::Forms::TextBox^ textBoxSeuilReapStockInsert;
 
 
-private: System::Windows::Forms::TextBox^ textBoxNomStockInsert;
+	private: System::Windows::Forms::TextBox^ textBoxNomStockInsert;
 
 	private: System::Windows::Forms::Label^ label54;
-private: System::Windows::Forms::Button^ insertButtonStock;
+	private: System::Windows::Forms::Button^ insertButtonStock;
 
 	private: System::Windows::Forms::TabPage^ tabPage10;
 
@@ -287,39 +298,37 @@ private: System::Windows::Forms::Button^ insertButtonStock;
 
 
 	private: System::Windows::Forms::TabPage^ tabPage11;
-private: System::Windows::Forms::TextBox^ textBoxIDStockDelete;
+	private: System::Windows::Forms::TextBox^ textBoxIDStockDelete;
 
 	private: System::Windows::Forms::Label^ label65;
-private: System::Windows::Forms::Button^ deleteButtonStock;
+	private: System::Windows::Forms::Button^ deleteButtonStock;
 
-private: System::Windows::Forms::TextBox^ textBoxRefStockUpdate;
+	private: System::Windows::Forms::TextBox^ textBoxRefStockUpdate;
 
 	private: System::Windows::Forms::Label^ label55;
-private: System::Windows::Forms::Button^ updateButtonStock;
+	private: System::Windows::Forms::Button^ updateButtonStock;
 
 	private: System::Windows::Forms::Label^ label45;
 	private: System::Windows::Forms::Label^ label49;
 	private: System::Windows::Forms::Label^ label50;
-private: System::Windows::Forms::TextBox^ textBoxPrixProStockUpdate;
+	private: System::Windows::Forms::TextBox^ textBoxPrixProStockUpdate;
 
-private: System::Windows::Forms::TextBox^ textBoxQuantSStockUpdate;
-private: System::Windows::Forms::TextBox^ textBoxSeuilReapStockUpdate;
-private: System::Windows::Forms::TabControl^ tabControl4;
-private: System::Windows::Forms::TabPage^ tabPage12;
-private: System::Windows::Forms::Label^ label58;
-private: System::Windows::Forms::TextBox^ textBoxDateEmiComInsert;
+	private: System::Windows::Forms::TextBox^ textBoxQuantSStockUpdate;
+	private: System::Windows::Forms::TextBox^ textBoxSeuilReapStockUpdate;
+	private: System::Windows::Forms::TabControl^ tabControl4;
+	private: System::Windows::Forms::TabPage^ tabPage12;
+	private: System::Windows::Forms::Label^ label58;
+	private: System::Windows::Forms::TextBox^ textBoxDateEmiComInsert;
 
-private: System::Windows::Forms::TextBox^ textBoxDateLivrComInsert;
-
-
+	private: System::Windows::Forms::TextBox^ textBoxDateLivrComInsert;
 
 
-private: System::Windows::Forms::Label^ label60;
-private: System::Windows::Forms::Button^ insertButtonCommande;
-
-private: System::Windows::Forms::TabPage^ tabPage13;
 
 
+	private: System::Windows::Forms::Label^ label60;
+	private: System::Windows::Forms::Button^ insertButtonCommande;
+
+	private: System::Windows::Forms::TabPage^ tabPage13;
 
 
 
@@ -332,30 +341,48 @@ private: System::Windows::Forms::TabPage^ tabPage13;
 
 
 
-private: System::Windows::Forms::Label^ label71;
-private: System::Windows::Forms::TextBox^ textBoxRefCComUpdate;
-
-private: System::Windows::Forms::Label^ label72;
-private: System::Windows::Forms::TextBox^ textBoxDateEmiComUpdate;
-
-private: System::Windows::Forms::TextBox^ textBoxDateLivrComUpdate;
-
-private: System::Windows::Forms::Button^ updateButtonCommande;
 
 
+	private: System::Windows::Forms::Label^ label71;
+	private: System::Windows::Forms::TextBox^ textBoxRefCComUpdate;
 
-private: System::Windows::Forms::Label^ label74;
-private: System::Windows::Forms::TabPage^ tabPage14;
-private: System::Windows::Forms::TextBox^ textBoxRefCComDelete;
+	private: System::Windows::Forms::Label^ label72;
+	private: System::Windows::Forms::TextBox^ textBoxDateEmiComUpdate;
 
-private: System::Windows::Forms::Label^ label75;
-private: System::Windows::Forms::Button^ deleteButtonCommande;
+	private: System::Windows::Forms::TextBox^ textBoxDateLivrComUpdate;
 
-private: System::Windows::Forms::DataGridView^ dgv_enr_commande;
-private: System::Windows::Forms::Button^ btn_load_commande;
-private: System::Windows::Forms::TextBox^ textBoxIDClientCommznde;
+	private: System::Windows::Forms::Button^ updateButtonCommande;
 
-private: System::Windows::Forms::Label^ label11;
+
+
+	private: System::Windows::Forms::Label^ label74;
+	private: System::Windows::Forms::TabPage^ tabPage14;
+	private: System::Windows::Forms::TextBox^ textBoxRefCComDelete;
+
+	private: System::Windows::Forms::Label^ label75;
+	private: System::Windows::Forms::Button^ deleteButtonCommande;
+
+	private: System::Windows::Forms::DataGridView^ dgv_enr_commande;
+	private: System::Windows::Forms::Button^ btn_load_commande;
+private: System::Windows::Forms::TextBox^ textBoxIDClientCommande;
+
+
+	private: System::Windows::Forms::Label^ label11;
+	private: System::Windows::Forms::Label^ label57;
+	private: System::Windows::Forms::Label^ label56;
+	private: System::Windows::Forms::Label^ label51;
+	private: System::Windows::Forms::Label^ label15;
+	private: System::Windows::Forms::Label^ label14;
+	private: System::Windows::Forms::TextBox^ textBoxIDStat;
+	private: System::Windows::Forms::NumericUpDown^ numericUpDownRemiseStat;
+	private: System::Windows::Forms::NumericUpDown^ numericUpDownDemarqueStat;
+	private: System::Windows::Forms::NumericUpDown^ numericUpDownMargeStat;
+	private: System::Windows::Forms::NumericUpDown^ numericUpDownTVAStat;
+	private: System::Windows::Forms::NumericUpDown^ numericUpDownMoisStat;
+	private: System::Windows::Forms::Label^ label13;
+	private: System::Windows::Forms::Label^ label12;
+private: System::Windows::Forms::Button^ valeurAchatStockButton;
+
 
 
 
@@ -513,7 +540,7 @@ private: System::Windows::Forms::Label^ label11;
 			this->btn_load_stock = (gcnew System::Windows::Forms::Button());
 			this->tabPage8 = (gcnew System::Windows::Forms::TabPage());
 			this->label11 = (gcnew System::Windows::Forms::Label());
-			this->textBoxIDClientCommznde = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxIDClientCommande = (gcnew System::Windows::Forms::TextBox());
 			this->tabControl4 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage12 = (gcnew System::Windows::Forms::TabPage());
 			this->label58 = (gcnew System::Windows::Forms::Label());
@@ -536,15 +563,29 @@ private: System::Windows::Forms::Label^ label11;
 			this->dgv_enr_commande = (gcnew System::Windows::Forms::DataGridView());
 			this->btn_load_commande = (gcnew System::Windows::Forms::Button());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
-			this->button16 = (gcnew System::Windows::Forms::Button());
-			this->button15 = (gcnew System::Windows::Forms::Button());
-			this->button14 = (gcnew System::Windows::Forms::Button());
-			this->button13 = (gcnew System::Windows::Forms::Button());
-			this->button12 = (gcnew System::Windows::Forms::Button());
-			this->button11 = (gcnew System::Windows::Forms::Button());
-			this->button10 = (gcnew System::Windows::Forms::Button());
-			this->button9 = (gcnew System::Windows::Forms::Button());
-			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
+			this->label57 = (gcnew System::Windows::Forms::Label());
+			this->label56 = (gcnew System::Windows::Forms::Label());
+			this->label51 = (gcnew System::Windows::Forms::Label());
+			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->textBoxIDStat = (gcnew System::Windows::Forms::TextBox());
+			this->numericUpDownRemiseStat = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDownDemarqueStat = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDownMargeStat = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDownTVAStat = (gcnew System::Windows::Forms::NumericUpDown());
+			this->numericUpDownMoisStat = (gcnew System::Windows::Forms::NumericUpDown());
+			this->label13 = (gcnew System::Windows::Forms::Label());
+			this->label12 = (gcnew System::Windows::Forms::Label());
+			this->articlePlusVendusButton = (gcnew System::Windows::Forms::Button());
+			this->articleMoinsVendusButton = (gcnew System::Windows::Forms::Button());
+			this->simulationButton = (gcnew System::Windows::Forms::Button());
+			this->seuilButton = (gcnew System::Windows::Forms::Button());
+			this->achatButton = (gcnew System::Windows::Forms::Button());
+			this->valeurAchatStockButton = (gcnew System::Windows::Forms::Button());
+			this->valeurComStockButton = (gcnew System::Windows::Forms::Button());
+			this->CAButton = (gcnew System::Windows::Forms::Button());
+			this->panierMoyenButton = (gcnew System::Windows::Forms::Button());
+			this->dgv_enr_stat = (gcnew System::Windows::Forms::DataGridView());
 			ClientTabControl = (gcnew System::Windows::Forms::TabControl());
 			ClientTabControl->SuspendLayout();
 			this->tabPage1->SuspendLayout();
@@ -578,7 +619,12 @@ private: System::Windows::Forms::Label^ label11;
 			this->tabPage14->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr_commande))->BeginInit();
 			this->tabPage4->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownRemiseStat))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownDemarqueStat))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownMargeStat))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownTVAStat))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownMoisStat))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr_stat))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// ClientTabControl
@@ -602,8 +648,8 @@ private: System::Windows::Forms::Label^ label11;
 			this->tabPage1->Controls->Add(this->btn_load_client);
 			this->tabPage1->Location = System::Drawing::Point(4, 25);
 			this->tabPage1->Name = L"tabPage1";
-			this->tabPage1->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
-			this->tabPage1->Size = System::Drawing::Size(744, 644);
+			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage1->Size = System::Drawing::Size(744, 817);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Client";
 			this->tabPage1->UseVisualStyleBackColor = true;
@@ -644,7 +690,7 @@ private: System::Windows::Forms::Label^ label11;
 			this->tabPage5->Controls->Add(this->insertButtonClient);
 			this->tabPage5->Location = System::Drawing::Point(4, 25);
 			this->tabPage5->Name = L"tabPage5";
-			this->tabPage5->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
+			this->tabPage5->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage5->Size = System::Drawing::Size(724, 322);
 			this->tabPage5->TabIndex = 0;
 			this->tabPage5->Text = L"Insert";
@@ -715,7 +761,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxAdresseClientFacInsert
 			// 
 			this->textBoxAdresseClientFacInsert->Location = System::Drawing::Point(431, 221);
-			this->textBoxAdresseClientFacInsert->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxAdresseClientFacInsert->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxAdresseClientFacInsert->Name = L"textBoxAdresseClientFacInsert";
 			this->textBoxAdresseClientFacInsert->Size = System::Drawing::Size(133, 22);
 			this->textBoxAdresseClientFacInsert->TabIndex = 43;
@@ -723,7 +769,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxAdresseClientLivInsert
 			// 
 			this->textBoxAdresseClientLivInsert->Location = System::Drawing::Point(431, 86);
-			this->textBoxAdresseClientLivInsert->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxAdresseClientLivInsert->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxAdresseClientLivInsert->Name = L"textBoxAdresseClientLivInsert";
 			this->textBoxAdresseClientLivInsert->Size = System::Drawing::Size(133, 22);
 			this->textBoxAdresseClientLivInsert->TabIndex = 42;
@@ -794,7 +840,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxDateNaissanceClientInsert
 			// 
 			this->textBoxDateNaissanceClientInsert->Location = System::Drawing::Point(27, 202);
-			this->textBoxDateNaissanceClientInsert->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxDateNaissanceClientInsert->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxDateNaissanceClientInsert->Name = L"textBoxDateNaissanceClientInsert";
 			this->textBoxDateNaissanceClientInsert->Size = System::Drawing::Size(220, 22);
 			this->textBoxDateNaissanceClientInsert->TabIndex = 31;
@@ -802,7 +848,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxPrenomClientInsert
 			// 
 			this->textBoxPrenomClientInsert->Location = System::Drawing::Point(27, 140);
-			this->textBoxPrenomClientInsert->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxPrenomClientInsert->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxPrenomClientInsert->Name = L"textBoxPrenomClientInsert";
 			this->textBoxPrenomClientInsert->Size = System::Drawing::Size(220, 22);
 			this->textBoxPrenomClientInsert->TabIndex = 30;
@@ -810,11 +856,10 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxNomClientInsert
 			// 
 			this->textBoxNomClientInsert->Location = System::Drawing::Point(27, 84);
-			this->textBoxNomClientInsert->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxNomClientInsert->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxNomClientInsert->Name = L"textBoxNomClientInsert";
 			this->textBoxNomClientInsert->Size = System::Drawing::Size(219, 22);
 			this->textBoxNomClientInsert->TabIndex = 29;
-			this->textBoxNomClientInsert->TextChanged += gcnew System::EventHandler(this, &MyForm::textBoxNomClientInsert_TextChanged);
 			// 
 			// label43
 			// 
@@ -837,7 +882,7 @@ private: System::Windows::Forms::Label^ label11;
 			// insertButtonClient
 			// 
 			this->insertButtonClient->Location = System::Drawing::Point(553, 269);
-			this->insertButtonClient->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->insertButtonClient->Margin = System::Windows::Forms::Padding(4);
 			this->insertButtonClient->Name = L"insertButtonClient";
 			this->insertButtonClient->Size = System::Drawing::Size(164, 45);
 			this->insertButtonClient->TabIndex = 2;
@@ -872,7 +917,7 @@ private: System::Windows::Forms::Label^ label11;
 			this->tabPage6->Controls->Add(this->label26);
 			this->tabPage6->Location = System::Drawing::Point(4, 25);
 			this->tabPage6->Name = L"tabPage6";
-			this->tabPage6->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
+			this->tabPage6->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage6->Size = System::Drawing::Size(724, 322);
 			this->tabPage6->TabIndex = 1;
 			this->tabPage6->Text = L"Update";
@@ -943,7 +988,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxAdresseClientFacUpdate
 			// 
 			this->textBoxAdresseClientFacUpdate->Location = System::Drawing::Point(429, 211);
-			this->textBoxAdresseClientFacUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxAdresseClientFacUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxAdresseClientFacUpdate->Name = L"textBoxAdresseClientFacUpdate";
 			this->textBoxAdresseClientFacUpdate->Size = System::Drawing::Size(133, 22);
 			this->textBoxAdresseClientFacUpdate->TabIndex = 25;
@@ -951,7 +996,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxAdresseClientLivUpdate
 			// 
 			this->textBoxAdresseClientLivUpdate->Location = System::Drawing::Point(429, 75);
-			this->textBoxAdresseClientLivUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxAdresseClientLivUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxAdresseClientLivUpdate->Name = L"textBoxAdresseClientLivUpdate";
 			this->textBoxAdresseClientLivUpdate->Size = System::Drawing::Size(133, 22);
 			this->textBoxAdresseClientLivUpdate->TabIndex = 25;
@@ -1022,7 +1067,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxIDClientUpdate
 			// 
 			this->textBoxIDClientUpdate->Location = System::Drawing::Point(9, 51);
-			this->textBoxIDClientUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxIDClientUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxIDClientUpdate->Name = L"textBoxIDClientUpdate";
 			this->textBoxIDClientUpdate->Size = System::Drawing::Size(217, 22);
 			this->textBoxIDClientUpdate->TabIndex = 5;
@@ -1039,7 +1084,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxDateNaissanceClientUpdate
 			// 
 			this->textBoxDateNaissanceClientUpdate->Location = System::Drawing::Point(7, 216);
-			this->textBoxDateNaissanceClientUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxDateNaissanceClientUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxDateNaissanceClientUpdate->Name = L"textBoxDateNaissanceClientUpdate";
 			this->textBoxDateNaissanceClientUpdate->Size = System::Drawing::Size(220, 22);
 			this->textBoxDateNaissanceClientUpdate->TabIndex = 7;
@@ -1047,7 +1092,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxPrenomClientUpdate
 			// 
 			this->textBoxPrenomClientUpdate->Location = System::Drawing::Point(7, 154);
-			this->textBoxPrenomClientUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxPrenomClientUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxPrenomClientUpdate->Name = L"textBoxPrenomClientUpdate";
 			this->textBoxPrenomClientUpdate->Size = System::Drawing::Size(220, 22);
 			this->textBoxPrenomClientUpdate->TabIndex = 7;
@@ -1055,7 +1100,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxNomClientUpdate
 			// 
 			this->textBoxNomClientUpdate->Location = System::Drawing::Point(8, 99);
-			this->textBoxNomClientUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxNomClientUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxNomClientUpdate->Name = L"textBoxNomClientUpdate";
 			this->textBoxNomClientUpdate->Size = System::Drawing::Size(219, 22);
 			this->textBoxNomClientUpdate->TabIndex = 6;
@@ -1072,7 +1117,7 @@ private: System::Windows::Forms::Label^ label11;
 			// updateButtonClient
 			// 
 			this->updateButtonClient->Location = System::Drawing::Point(556, 269);
-			this->updateButtonClient->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->updateButtonClient->Margin = System::Windows::Forms::Padding(4);
 			this->updateButtonClient->Name = L"updateButtonClient";
 			this->updateButtonClient->Size = System::Drawing::Size(164, 45);
 			this->updateButtonClient->TabIndex = 4;
@@ -1096,7 +1141,7 @@ private: System::Windows::Forms::Label^ label11;
 			this->tabPage7->Controls->Add(this->deleteButtonClient);
 			this->tabPage7->Location = System::Drawing::Point(4, 25);
 			this->tabPage7->Name = L"tabPage7";
-			this->tabPage7->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
+			this->tabPage7->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage7->Size = System::Drawing::Size(724, 322);
 			this->tabPage7->TabIndex = 2;
 			this->tabPage7->Text = L"Delete";
@@ -1105,7 +1150,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxIDClientDelete
 			// 
 			this->textBoxIDClientDelete->Location = System::Drawing::Point(157, 141);
-			this->textBoxIDClientDelete->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxIDClientDelete->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxIDClientDelete->Name = L"textBoxIDClientDelete";
 			this->textBoxIDClientDelete->Size = System::Drawing::Size(391, 22);
 			this->textBoxIDClientDelete->TabIndex = 9;
@@ -1122,7 +1167,7 @@ private: System::Windows::Forms::Label^ label11;
 			// deleteButtonClient
 			// 
 			this->deleteButtonClient->Location = System::Drawing::Point(553, 269);
-			this->deleteButtonClient->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->deleteButtonClient->Margin = System::Windows::Forms::Padding(4);
 			this->deleteButtonClient->Name = L"deleteButtonClient";
 			this->deleteButtonClient->Size = System::Drawing::Size(164, 45);
 			this->deleteButtonClient->TabIndex = 3;
@@ -1134,17 +1179,16 @@ private: System::Windows::Forms::Label^ label11;
 			// 
 			this->dgv_enr_client->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dgv_enr_client->Location = System::Drawing::Point(5, 0);
-			this->dgv_enr_client->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->dgv_enr_client->Margin = System::Windows::Forms::Padding(4);
 			this->dgv_enr_client->Name = L"dgv_enr_client";
 			this->dgv_enr_client->RowHeadersWidth = 51;
 			this->dgv_enr_client->Size = System::Drawing::Size(727, 341);
 			this->dgv_enr_client->TabIndex = 11;
-			this->dgv_enr_client->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyForm::dgv_enr_client_CellContentClick);
 			// 
 			// btn_load_client
 			// 
 			this->btn_load_client->Location = System::Drawing::Point(5, 356);
-			this->btn_load_client->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btn_load_client->Margin = System::Windows::Forms::Padding(4);
 			this->btn_load_client->Name = L"btn_load_client";
 			this->btn_load_client->Size = System::Drawing::Size(727, 65);
 			this->btn_load_client->TabIndex = 12;
@@ -1159,8 +1203,8 @@ private: System::Windows::Forms::Label^ label11;
 			this->tabPage2->Controls->Add(this->btn_load_personnel);
 			this->tabPage2->Location = System::Drawing::Point(4, 25);
 			this->tabPage2->Name = L"tabPage2";
-			this->tabPage2->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
-			this->tabPage2->Size = System::Drawing::Size(744, 803);
+			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage2->Size = System::Drawing::Size(744, 817);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Personnel";
 			this->tabPage2->UseVisualStyleBackColor = true;
@@ -1196,7 +1240,7 @@ private: System::Windows::Forms::Label^ label11;
 			this->InsertTabClient->Controls->Add(this->insertButtonPerso);
 			this->InsertTabClient->Location = System::Drawing::Point(4, 25);
 			this->InsertTabClient->Name = L"InsertTabClient";
-			this->InsertTabClient->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
+			this->InsertTabClient->Padding = System::Windows::Forms::Padding(3);
 			this->InsertTabClient->Size = System::Drawing::Size(724, 322);
 			this->InsertTabClient->TabIndex = 0;
 			this->InsertTabClient->Text = L"Insert";
@@ -1236,7 +1280,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxAdressePersoInsert
 			// 
 			this->textBoxAdressePersoInsert->Location = System::Drawing::Point(459, 144);
-			this->textBoxAdressePersoInsert->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxAdressePersoInsert->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxAdressePersoInsert->Name = L"textBoxAdressePersoInsert";
 			this->textBoxAdressePersoInsert->Size = System::Drawing::Size(133, 22);
 			this->textBoxAdressePersoInsert->TabIndex = 69;
@@ -1271,7 +1315,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxIDSupPersoInsert
 			// 
 			this->textBoxIDSupPersoInsert->Location = System::Drawing::Point(23, 236);
-			this->textBoxIDSupPersoInsert->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxIDSupPersoInsert->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxIDSupPersoInsert->Name = L"textBoxIDSupPersoInsert";
 			this->textBoxIDSupPersoInsert->Size = System::Drawing::Size(288, 22);
 			this->textBoxIDSupPersoInsert->TabIndex = 57;
@@ -1288,16 +1332,15 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxDateEmbauchePersoInsert
 			// 
 			this->textBoxDateEmbauchePersoInsert->Location = System::Drawing::Point(21, 180);
-			this->textBoxDateEmbauchePersoInsert->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxDateEmbauchePersoInsert->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxDateEmbauchePersoInsert->Name = L"textBoxDateEmbauchePersoInsert";
 			this->textBoxDateEmbauchePersoInsert->Size = System::Drawing::Size(289, 22);
 			this->textBoxDateEmbauchePersoInsert->TabIndex = 60;
-			this->textBoxDateEmbauchePersoInsert->TextChanged += gcnew System::EventHandler(this, &MyForm::textBoxDateEmbauchePersoInsert_TextChanged);
 			// 
 			// textBoxPrenomPersoInsert
 			// 
 			this->textBoxPrenomPersoInsert->Location = System::Drawing::Point(21, 118);
-			this->textBoxPrenomPersoInsert->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxPrenomPersoInsert->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxPrenomPersoInsert->Name = L"textBoxPrenomPersoInsert";
 			this->textBoxPrenomPersoInsert->Size = System::Drawing::Size(289, 22);
 			this->textBoxPrenomPersoInsert->TabIndex = 59;
@@ -1305,7 +1348,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxNomPersoInsert
 			// 
 			this->textBoxNomPersoInsert->Location = System::Drawing::Point(21, 61);
-			this->textBoxNomPersoInsert->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxNomPersoInsert->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxNomPersoInsert->Name = L"textBoxNomPersoInsert";
 			this->textBoxNomPersoInsert->Size = System::Drawing::Size(289, 22);
 			this->textBoxNomPersoInsert->TabIndex = 58;
@@ -1340,7 +1383,7 @@ private: System::Windows::Forms::Label^ label11;
 			// insertButtonPerso
 			// 
 			this->insertButtonPerso->Location = System::Drawing::Point(553, 269);
-			this->insertButtonPerso->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->insertButtonPerso->Margin = System::Windows::Forms::Padding(4);
 			this->insertButtonPerso->Name = L"insertButtonPerso";
 			this->insertButtonPerso->Size = System::Drawing::Size(164, 45);
 			this->insertButtonPerso->TabIndex = 2;
@@ -1370,7 +1413,7 @@ private: System::Windows::Forms::Label^ label11;
 			this->UpdateTabClient->Controls->Add(this->label17);
 			this->UpdateTabClient->Location = System::Drawing::Point(4, 25);
 			this->UpdateTabClient->Name = L"UpdateTabClient";
-			this->UpdateTabClient->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
+			this->UpdateTabClient->Padding = System::Windows::Forms::Padding(3);
 			this->UpdateTabClient->Size = System::Drawing::Size(724, 322);
 			this->UpdateTabClient->TabIndex = 1;
 			this->UpdateTabClient->Text = L"Update";
@@ -1410,7 +1453,7 @@ private: System::Windows::Forms::Label^ label11;
 			// updateButtonPerso
 			// 
 			this->updateButtonPerso->Location = System::Drawing::Point(553, 269);
-			this->updateButtonPerso->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->updateButtonPerso->Margin = System::Windows::Forms::Padding(4);
 			this->updateButtonPerso->Name = L"updateButtonPerso";
 			this->updateButtonPerso->Size = System::Drawing::Size(164, 45);
 			this->updateButtonPerso->TabIndex = 4;
@@ -1421,7 +1464,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxAdressePersoUpdate
 			// 
 			this->textBoxAdressePersoUpdate->Location = System::Drawing::Point(451, 141);
-			this->textBoxAdressePersoUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxAdressePersoUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxAdressePersoUpdate->Name = L"textBoxAdressePersoUpdate";
 			this->textBoxAdressePersoUpdate->Size = System::Drawing::Size(133, 22);
 			this->textBoxAdressePersoUpdate->TabIndex = 52;
@@ -1456,7 +1499,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxIDSupPersoUpdate
 			// 
 			this->textBoxIDSupPersoUpdate->Location = System::Drawing::Point(9, 269);
-			this->textBoxIDSupPersoUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxIDSupPersoUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxIDSupPersoUpdate->Name = L"textBoxIDSupPersoUpdate";
 			this->textBoxIDSupPersoUpdate->Size = System::Drawing::Size(288, 22);
 			this->textBoxIDSupPersoUpdate->TabIndex = 5;
@@ -1473,7 +1516,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxIDPersoUpdate
 			// 
 			this->textBoxIDPersoUpdate->Location = System::Drawing::Point(9, 48);
-			this->textBoxIDPersoUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxIDPersoUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxIDPersoUpdate->Name = L"textBoxIDPersoUpdate";
 			this->textBoxIDPersoUpdate->Size = System::Drawing::Size(288, 22);
 			this->textBoxIDPersoUpdate->TabIndex = 5;
@@ -1490,7 +1533,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxDateEmbauchePersoUpdate
 			// 
 			this->textBoxDateEmbauchePersoUpdate->Location = System::Drawing::Point(7, 213);
-			this->textBoxDateEmbauchePersoUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxDateEmbauchePersoUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxDateEmbauchePersoUpdate->Name = L"textBoxDateEmbauchePersoUpdate";
 			this->textBoxDateEmbauchePersoUpdate->Size = System::Drawing::Size(289, 22);
 			this->textBoxDateEmbauchePersoUpdate->TabIndex = 7;
@@ -1498,7 +1541,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxPrenomPersoUpdate
 			// 
 			this->textBoxPrenomPersoUpdate->Location = System::Drawing::Point(7, 152);
-			this->textBoxPrenomPersoUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxPrenomPersoUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxPrenomPersoUpdate->Name = L"textBoxPrenomPersoUpdate";
 			this->textBoxPrenomPersoUpdate->Size = System::Drawing::Size(289, 22);
 			this->textBoxPrenomPersoUpdate->TabIndex = 7;
@@ -1506,7 +1549,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxNomPersoUpdate
 			// 
 			this->textBoxNomPersoUpdate->Location = System::Drawing::Point(8, 95);
-			this->textBoxNomPersoUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxNomPersoUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxNomPersoUpdate->Name = L"textBoxNomPersoUpdate";
 			this->textBoxNomPersoUpdate->Size = System::Drawing::Size(289, 22);
 			this->textBoxNomPersoUpdate->TabIndex = 6;
@@ -1545,7 +1588,7 @@ private: System::Windows::Forms::Label^ label11;
 			this->DeleteTabClient->Controls->Add(this->deleteButtonPerso);
 			this->DeleteTabClient->Location = System::Drawing::Point(4, 25);
 			this->DeleteTabClient->Name = L"DeleteTabClient";
-			this->DeleteTabClient->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
+			this->DeleteTabClient->Padding = System::Windows::Forms::Padding(3);
 			this->DeleteTabClient->Size = System::Drawing::Size(724, 322);
 			this->DeleteTabClient->TabIndex = 2;
 			this->DeleteTabClient->Text = L"Delete";
@@ -1554,7 +1597,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxIDPersoDelete
 			// 
 			this->textBoxIDPersoDelete->Location = System::Drawing::Point(175, 159);
-			this->textBoxIDPersoDelete->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxIDPersoDelete->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxIDPersoDelete->Name = L"textBoxIDPersoDelete";
 			this->textBoxIDPersoDelete->Size = System::Drawing::Size(391, 22);
 			this->textBoxIDPersoDelete->TabIndex = 9;
@@ -1571,7 +1614,7 @@ private: System::Windows::Forms::Label^ label11;
 			// deleteButtonPerso
 			// 
 			this->deleteButtonPerso->Location = System::Drawing::Point(553, 269);
-			this->deleteButtonPerso->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->deleteButtonPerso->Margin = System::Windows::Forms::Padding(4);
 			this->deleteButtonPerso->Name = L"deleteButtonPerso";
 			this->deleteButtonPerso->Size = System::Drawing::Size(164, 45);
 			this->deleteButtonPerso->TabIndex = 3;
@@ -1583,7 +1626,7 @@ private: System::Windows::Forms::Label^ label11;
 			// 
 			this->dgv_enr_personnel->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dgv_enr_personnel->Location = System::Drawing::Point(5, 8);
-			this->dgv_enr_personnel->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->dgv_enr_personnel->Margin = System::Windows::Forms::Padding(4);
 			this->dgv_enr_personnel->Name = L"dgv_enr_personnel";
 			this->dgv_enr_personnel->RowHeadersWidth = 51;
 			this->dgv_enr_personnel->Size = System::Drawing::Size(727, 341);
@@ -1592,7 +1635,7 @@ private: System::Windows::Forms::Label^ label11;
 			// btn_load_personnel
 			// 
 			this->btn_load_personnel->Location = System::Drawing::Point(5, 356);
-			this->btn_load_personnel->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btn_load_personnel->Margin = System::Windows::Forms::Padding(4);
 			this->btn_load_personnel->Name = L"btn_load_personnel";
 			this->btn_load_personnel->Size = System::Drawing::Size(727, 65);
 			this->btn_load_personnel->TabIndex = 1;
@@ -1607,7 +1650,7 @@ private: System::Windows::Forms::Label^ label11;
 			this->tabPage3->Controls->Add(this->btn_load_stock);
 			this->tabPage3->Location = System::Drawing::Point(4, 25);
 			this->tabPage3->Name = L"tabPage3";
-			this->tabPage3->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
+			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage3->Size = System::Drawing::Size(744, 817);
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"Stock";
@@ -1637,7 +1680,7 @@ private: System::Windows::Forms::Label^ label11;
 			this->tabPage9->Controls->Add(this->insertButtonStock);
 			this->tabPage9->Location = System::Drawing::Point(4, 25);
 			this->tabPage9->Name = L"tabPage9";
-			this->tabPage9->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
+			this->tabPage9->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage9->Size = System::Drawing::Size(724, 322);
 			this->tabPage9->TabIndex = 0;
 			this->tabPage9->Text = L"Insert";
@@ -1673,7 +1716,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxPrixProStockInsert
 			// 
 			this->textBoxPrixProStockInsert->Location = System::Drawing::Point(212, 180);
-			this->textBoxPrixProStockInsert->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxPrixProStockInsert->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxPrixProStockInsert->Name = L"textBoxPrixProStockInsert";
 			this->textBoxPrixProStockInsert->Size = System::Drawing::Size(288, 22);
 			this->textBoxPrixProStockInsert->TabIndex = 57;
@@ -1681,7 +1724,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxQuantSStockInsert
 			// 
 			this->textBoxQuantSStockInsert->Location = System::Drawing::Point(211, 123);
-			this->textBoxQuantSStockInsert->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxQuantSStockInsert->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxQuantSStockInsert->Name = L"textBoxQuantSStockInsert";
 			this->textBoxQuantSStockInsert->Size = System::Drawing::Size(289, 22);
 			this->textBoxQuantSStockInsert->TabIndex = 60;
@@ -1689,16 +1732,15 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxSeuilReapStockInsert
 			// 
 			this->textBoxSeuilReapStockInsert->Location = System::Drawing::Point(211, 243);
-			this->textBoxSeuilReapStockInsert->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxSeuilReapStockInsert->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxSeuilReapStockInsert->Name = L"textBoxSeuilReapStockInsert";
 			this->textBoxSeuilReapStockInsert->Size = System::Drawing::Size(289, 22);
 			this->textBoxSeuilReapStockInsert->TabIndex = 59;
-			this->textBoxSeuilReapStockInsert->TextChanged += gcnew System::EventHandler(this, &MyForm::textBoxSeuilReapStockInsert_TextChanged);
 			// 
 			// textBoxNomStockInsert
 			// 
 			this->textBoxNomStockInsert->Location = System::Drawing::Point(211, 59);
-			this->textBoxNomStockInsert->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxNomStockInsert->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxNomStockInsert->Name = L"textBoxNomStockInsert";
 			this->textBoxNomStockInsert->Size = System::Drawing::Size(289, 22);
 			this->textBoxNomStockInsert->TabIndex = 58;
@@ -1715,7 +1757,7 @@ private: System::Windows::Forms::Label^ label11;
 			// insertButtonStock
 			// 
 			this->insertButtonStock->Location = System::Drawing::Point(553, 271);
-			this->insertButtonStock->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->insertButtonStock->Margin = System::Windows::Forms::Padding(4);
 			this->insertButtonStock->Name = L"insertButtonStock";
 			this->insertButtonStock->Size = System::Drawing::Size(164, 45);
 			this->insertButtonStock->TabIndex = 2;
@@ -1736,7 +1778,7 @@ private: System::Windows::Forms::Label^ label11;
 			this->tabPage10->Controls->Add(this->textBoxSeuilReapStockUpdate);
 			this->tabPage10->Location = System::Drawing::Point(4, 25);
 			this->tabPage10->Name = L"tabPage10";
-			this->tabPage10->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
+			this->tabPage10->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage10->Size = System::Drawing::Size(724, 322);
 			this->tabPage10->TabIndex = 1;
 			this->tabPage10->Text = L"Update";
@@ -1745,7 +1787,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxRefStockUpdate
 			// 
 			this->textBoxRefStockUpdate->Location = System::Drawing::Point(191, 42);
-			this->textBoxRefStockUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxRefStockUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxRefStockUpdate->Name = L"textBoxRefStockUpdate";
 			this->textBoxRefStockUpdate->Size = System::Drawing::Size(289, 22);
 			this->textBoxRefStockUpdate->TabIndex = 29;
@@ -1762,7 +1804,7 @@ private: System::Windows::Forms::Label^ label11;
 			// updateButtonStock
 			// 
 			this->updateButtonStock->Location = System::Drawing::Point(551, 267);
-			this->updateButtonStock->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->updateButtonStock->Margin = System::Windows::Forms::Padding(4);
 			this->updateButtonStock->Name = L"updateButtonStock";
 			this->updateButtonStock->Size = System::Drawing::Size(164, 45);
 			this->updateButtonStock->TabIndex = 74;
@@ -1800,7 +1842,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxPrixProStockUpdate
 			// 
 			this->textBoxPrixProStockUpdate->Location = System::Drawing::Point(191, 197);
-			this->textBoxPrixProStockUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxPrixProStockUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxPrixProStockUpdate->Name = L"textBoxPrixProStockUpdate";
 			this->textBoxPrixProStockUpdate->Size = System::Drawing::Size(288, 22);
 			this->textBoxPrixProStockUpdate->TabIndex = 69;
@@ -1808,7 +1850,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxQuantSStockUpdate
 			// 
 			this->textBoxQuantSStockUpdate->Location = System::Drawing::Point(192, 124);
-			this->textBoxQuantSStockUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxQuantSStockUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxQuantSStockUpdate->Name = L"textBoxQuantSStockUpdate";
 			this->textBoxQuantSStockUpdate->Size = System::Drawing::Size(289, 22);
 			this->textBoxQuantSStockUpdate->TabIndex = 72;
@@ -1816,7 +1858,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxSeuilReapStockUpdate
 			// 
 			this->textBoxSeuilReapStockUpdate->Location = System::Drawing::Point(191, 275);
-			this->textBoxSeuilReapStockUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxSeuilReapStockUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxSeuilReapStockUpdate->Name = L"textBoxSeuilReapStockUpdate";
 			this->textBoxSeuilReapStockUpdate->Size = System::Drawing::Size(289, 22);
 			this->textBoxSeuilReapStockUpdate->TabIndex = 71;
@@ -1828,7 +1870,7 @@ private: System::Windows::Forms::Label^ label11;
 			this->tabPage11->Controls->Add(this->deleteButtonStock);
 			this->tabPage11->Location = System::Drawing::Point(4, 25);
 			this->tabPage11->Name = L"tabPage11";
-			this->tabPage11->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
+			this->tabPage11->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage11->Size = System::Drawing::Size(724, 322);
 			this->tabPage11->TabIndex = 2;
 			this->tabPage11->Text = L"Delete";
@@ -1837,7 +1879,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxIDStockDelete
 			// 
 			this->textBoxIDStockDelete->Location = System::Drawing::Point(175, 159);
-			this->textBoxIDStockDelete->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxIDStockDelete->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxIDStockDelete->Name = L"textBoxIDStockDelete";
 			this->textBoxIDStockDelete->Size = System::Drawing::Size(391, 22);
 			this->textBoxIDStockDelete->TabIndex = 9;
@@ -1854,7 +1896,7 @@ private: System::Windows::Forms::Label^ label11;
 			// deleteButtonStock
 			// 
 			this->deleteButtonStock->Location = System::Drawing::Point(553, 269);
-			this->deleteButtonStock->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->deleteButtonStock->Margin = System::Windows::Forms::Padding(4);
 			this->deleteButtonStock->Name = L"deleteButtonStock";
 			this->deleteButtonStock->Size = System::Drawing::Size(164, 45);
 			this->deleteButtonStock->TabIndex = 3;
@@ -1865,7 +1907,7 @@ private: System::Windows::Forms::Label^ label11;
 			// 
 			this->dgv_enr_stock->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dgv_enr_stock->Location = System::Drawing::Point(9, 6);
-			this->dgv_enr_stock->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->dgv_enr_stock->Margin = System::Windows::Forms::Padding(4);
 			this->dgv_enr_stock->Name = L"dgv_enr_stock";
 			this->dgv_enr_stock->RowHeadersWidth = 51;
 			this->dgv_enr_stock->Size = System::Drawing::Size(727, 341);
@@ -1874,7 +1916,7 @@ private: System::Windows::Forms::Label^ label11;
 			// btn_load_stock
 			// 
 			this->btn_load_stock->Location = System::Drawing::Point(8, 355);
-			this->btn_load_stock->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btn_load_stock->Margin = System::Windows::Forms::Padding(4);
 			this->btn_load_stock->Name = L"btn_load_stock";
 			this->btn_load_stock->Size = System::Drawing::Size(727, 65);
 			this->btn_load_stock->TabIndex = 12;
@@ -1885,13 +1927,13 @@ private: System::Windows::Forms::Label^ label11;
 			// tabPage8
 			// 
 			this->tabPage8->Controls->Add(this->label11);
-			this->tabPage8->Controls->Add(this->textBoxIDClientCommznde);
+			this->tabPage8->Controls->Add(this->textBoxIDClientCommande);
 			this->tabPage8->Controls->Add(this->tabControl4);
 			this->tabPage8->Controls->Add(this->dgv_enr_commande);
 			this->tabPage8->Controls->Add(this->btn_load_commande);
 			this->tabPage8->Location = System::Drawing::Point(4, 25);
 			this->tabPage8->Name = L"tabPage8";
-			this->tabPage8->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
+			this->tabPage8->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage8->Size = System::Drawing::Size(744, 817);
 			this->tabPage8->TabIndex = 4;
 			this->tabPage8->Text = L"Commande";
@@ -1906,13 +1948,13 @@ private: System::Windows::Forms::Label^ label11;
 			this->label11->TabIndex = 32;
 			this->label11->Text = L"IDClient";
 			// 
-			// textBoxIDClientCommznde
+			// textBoxIDClientCommande
 			// 
-			this->textBoxIDClientCommznde->Location = System::Drawing::Point(226, 344);
-			this->textBoxIDClientCommznde->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->textBoxIDClientCommznde->Name = L"textBoxIDClientCommznde";
-			this->textBoxIDClientCommznde->Size = System::Drawing::Size(220, 22);
-			this->textBoxIDClientCommznde->TabIndex = 31;
+			this->textBoxIDClientCommande->Location = System::Drawing::Point(226, 344);
+			this->textBoxIDClientCommande->Margin = System::Windows::Forms::Padding(4);
+			this->textBoxIDClientCommande->Name = L"textBoxIDClientCommande";
+			this->textBoxIDClientCommande->Size = System::Drawing::Size(220, 22);
+			this->textBoxIDClientCommande->TabIndex = 31;
 			// 
 			// tabControl4
 			// 
@@ -1934,7 +1976,7 @@ private: System::Windows::Forms::Label^ label11;
 			this->tabPage12->Controls->Add(this->insertButtonCommande);
 			this->tabPage12->Location = System::Drawing::Point(4, 25);
 			this->tabPage12->Name = L"tabPage12";
-			this->tabPage12->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
+			this->tabPage12->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage12->Size = System::Drawing::Size(724, 322);
 			this->tabPage12->TabIndex = 0;
 			this->tabPage12->Text = L"Insert";
@@ -1952,7 +1994,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxDateEmiComInsert
 			// 
 			this->textBoxDateEmiComInsert->Location = System::Drawing::Point(216, 173);
-			this->textBoxDateEmiComInsert->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxDateEmiComInsert->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxDateEmiComInsert->Name = L"textBoxDateEmiComInsert";
 			this->textBoxDateEmiComInsert->Size = System::Drawing::Size(220, 22);
 			this->textBoxDateEmiComInsert->TabIndex = 31;
@@ -1960,11 +2002,10 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxDateLivrComInsert
 			// 
 			this->textBoxDateLivrComInsert->Location = System::Drawing::Point(216, 89);
-			this->textBoxDateLivrComInsert->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxDateLivrComInsert->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxDateLivrComInsert->Name = L"textBoxDateLivrComInsert";
 			this->textBoxDateLivrComInsert->Size = System::Drawing::Size(220, 22);
 			this->textBoxDateLivrComInsert->TabIndex = 30;
-			this->textBoxDateLivrComInsert->TextChanged += gcnew System::EventHandler(this, &MyForm::textBoxDateLivrComInsert_TextChanged);
 			// 
 			// label60
 			// 
@@ -1978,7 +2019,7 @@ private: System::Windows::Forms::Label^ label11;
 			// insertButtonCommande
 			// 
 			this->insertButtonCommande->Location = System::Drawing::Point(553, 269);
-			this->insertButtonCommande->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->insertButtonCommande->Margin = System::Windows::Forms::Padding(4);
 			this->insertButtonCommande->Name = L"insertButtonCommande";
 			this->insertButtonCommande->Size = System::Drawing::Size(164, 45);
 			this->insertButtonCommande->TabIndex = 2;
@@ -1996,12 +2037,11 @@ private: System::Windows::Forms::Label^ label11;
 			this->tabPage13->Controls->Add(this->label74);
 			this->tabPage13->Location = System::Drawing::Point(4, 25);
 			this->tabPage13->Name = L"tabPage13";
-			this->tabPage13->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
+			this->tabPage13->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage13->Size = System::Drawing::Size(724, 322);
 			this->tabPage13->TabIndex = 1;
 			this->tabPage13->Text = L"Update";
 			this->tabPage13->UseVisualStyleBackColor = true;
-			this->tabPage13->Click += gcnew System::EventHandler(this, &MyForm::tabPage13_Click);
 			// 
 			// label71
 			// 
@@ -2015,7 +2055,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxRefCComUpdate
 			// 
 			this->textBoxRefCComUpdate->Location = System::Drawing::Point(213, 44);
-			this->textBoxRefCComUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxRefCComUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxRefCComUpdate->Name = L"textBoxRefCComUpdate";
 			this->textBoxRefCComUpdate->Size = System::Drawing::Size(217, 22);
 			this->textBoxRefCComUpdate->TabIndex = 5;
@@ -2032,7 +2072,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxDateEmiComUpdate
 			// 
 			this->textBoxDateEmiComUpdate->Location = System::Drawing::Point(213, 197);
-			this->textBoxDateEmiComUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxDateEmiComUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxDateEmiComUpdate->Name = L"textBoxDateEmiComUpdate";
 			this->textBoxDateEmiComUpdate->Size = System::Drawing::Size(220, 22);
 			this->textBoxDateEmiComUpdate->TabIndex = 7;
@@ -2040,7 +2080,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxDateLivrComUpdate
 			// 
 			this->textBoxDateLivrComUpdate->Location = System::Drawing::Point(213, 123);
-			this->textBoxDateLivrComUpdate->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxDateLivrComUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxDateLivrComUpdate->Name = L"textBoxDateLivrComUpdate";
 			this->textBoxDateLivrComUpdate->Size = System::Drawing::Size(220, 22);
 			this->textBoxDateLivrComUpdate->TabIndex = 7;
@@ -2048,7 +2088,7 @@ private: System::Windows::Forms::Label^ label11;
 			// updateButtonCommande
 			// 
 			this->updateButtonCommande->Location = System::Drawing::Point(551, 261);
-			this->updateButtonCommande->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->updateButtonCommande->Margin = System::Windows::Forms::Padding(4);
 			this->updateButtonCommande->Name = L"updateButtonCommande";
 			this->updateButtonCommande->Size = System::Drawing::Size(164, 45);
 			this->updateButtonCommande->TabIndex = 4;
@@ -2071,7 +2111,7 @@ private: System::Windows::Forms::Label^ label11;
 			this->tabPage14->Controls->Add(this->deleteButtonCommande);
 			this->tabPage14->Location = System::Drawing::Point(4, 25);
 			this->tabPage14->Name = L"tabPage14";
-			this->tabPage14->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
+			this->tabPage14->Padding = System::Windows::Forms::Padding(3);
 			this->tabPage14->Size = System::Drawing::Size(724, 322);
 			this->tabPage14->TabIndex = 2;
 			this->tabPage14->Text = L"Delete";
@@ -2080,7 +2120,7 @@ private: System::Windows::Forms::Label^ label11;
 			// textBoxRefCComDelete
 			// 
 			this->textBoxRefCComDelete->Location = System::Drawing::Point(157, 141);
-			this->textBoxRefCComDelete->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBoxRefCComDelete->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxRefCComDelete->Name = L"textBoxRefCComDelete";
 			this->textBoxRefCComDelete->Size = System::Drawing::Size(391, 22);
 			this->textBoxRefCComDelete->TabIndex = 9;
@@ -2097,7 +2137,7 @@ private: System::Windows::Forms::Label^ label11;
 			// deleteButtonCommande
 			// 
 			this->deleteButtonCommande->Location = System::Drawing::Point(553, 269);
-			this->deleteButtonCommande->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->deleteButtonCommande->Margin = System::Windows::Forms::Padding(4);
 			this->deleteButtonCommande->Name = L"deleteButtonCommande";
 			this->deleteButtonCommande->Size = System::Drawing::Size(164, 45);
 			this->deleteButtonCommande->TabIndex = 3;
@@ -2108,7 +2148,7 @@ private: System::Windows::Forms::Label^ label11;
 			// 
 			this->dgv_enr_commande->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dgv_enr_commande->Location = System::Drawing::Point(6, 12);
-			this->dgv_enr_commande->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->dgv_enr_commande->Margin = System::Windows::Forms::Padding(4);
 			this->dgv_enr_commande->Name = L"dgv_enr_commande";
 			this->dgv_enr_commande->RowHeadersWidth = 51;
 			this->dgv_enr_commande->Size = System::Drawing::Size(727, 289);
@@ -2117,7 +2157,7 @@ private: System::Windows::Forms::Label^ label11;
 			// btn_load_commande
 			// 
 			this->btn_load_commande->Location = System::Drawing::Point(5, 372);
-			this->btn_load_commande->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->btn_load_commande->Margin = System::Windows::Forms::Padding(4);
 			this->btn_load_commande->Name = L"btn_load_commande";
 			this->btn_load_commande->Size = System::Drawing::Size(727, 54);
 			this->btn_load_commande->TabIndex = 28;
@@ -2127,105 +2167,261 @@ private: System::Windows::Forms::Label^ label11;
 			// 
 			// tabPage4
 			// 
-			this->tabPage4->Controls->Add(this->button16);
-			this->tabPage4->Controls->Add(this->button15);
-			this->tabPage4->Controls->Add(this->button14);
-			this->tabPage4->Controls->Add(this->button13);
-			this->tabPage4->Controls->Add(this->button12);
-			this->tabPage4->Controls->Add(this->button11);
-			this->tabPage4->Controls->Add(this->button10);
-			this->tabPage4->Controls->Add(this->button9);
-			this->tabPage4->Controls->Add(this->dataGridView3);
+			this->tabPage4->Controls->Add(this->label57);
+			this->tabPage4->Controls->Add(this->label56);
+			this->tabPage4->Controls->Add(this->label51);
+			this->tabPage4->Controls->Add(this->label15);
+			this->tabPage4->Controls->Add(this->label14);
+			this->tabPage4->Controls->Add(this->textBoxIDStat);
+			this->tabPage4->Controls->Add(this->numericUpDownRemiseStat);
+			this->tabPage4->Controls->Add(this->numericUpDownDemarqueStat);
+			this->tabPage4->Controls->Add(this->numericUpDownMargeStat);
+			this->tabPage4->Controls->Add(this->numericUpDownTVAStat);
+			this->tabPage4->Controls->Add(this->numericUpDownMoisStat);
+			this->tabPage4->Controls->Add(this->label13);
+			this->tabPage4->Controls->Add(this->label12);
+			this->tabPage4->Controls->Add(this->articlePlusVendusButton);
+			this->tabPage4->Controls->Add(this->articleMoinsVendusButton);
+			this->tabPage4->Controls->Add(this->simulationButton);
+			this->tabPage4->Controls->Add(this->seuilButton);
+			this->tabPage4->Controls->Add(this->achatButton);
+			this->tabPage4->Controls->Add(this->valeurAchatStockButton);
+			this->tabPage4->Controls->Add(this->valeurComStockButton);
+			this->tabPage4->Controls->Add(this->CAButton);
+			this->tabPage4->Controls->Add(this->panierMoyenButton);
+			this->tabPage4->Controls->Add(this->dgv_enr_stat);
 			this->tabPage4->Location = System::Drawing::Point(4, 25);
 			this->tabPage4->Name = L"tabPage4";
-			this->tabPage4->Padding = System::Windows::Forms::Padding(3, 3, 3, 3);
-			this->tabPage4->Size = System::Drawing::Size(744, 803);
+			this->tabPage4->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage4->Size = System::Drawing::Size(744, 817);
 			this->tabPage4->TabIndex = 3;
 			this->tabPage4->Text = L"Gestion des STATS";
 			this->tabPage4->UseVisualStyleBackColor = true;
 			// 
-			// button16
+			// label57
 			// 
-			this->button16->Location = System::Drawing::Point(584, 157);
-			this->button16->Name = L"button16";
-			this->button16->Size = System::Drawing::Size(145, 81);
-			this->button16->TabIndex = 20;
-			this->button16->Text = L"Identifier les 10 articles les plus vendus";
-			this->button16->UseVisualStyleBackColor = true;
+			this->label57->AutoSize = true;
+			this->label57->Location = System::Drawing::Point(591, 625);
+			this->label57->Name = L"label57";
+			this->label57->Size = System::Drawing::Size(55, 17);
+			this->label57->TabIndex = 68;
+			this->label57->Text = L"Remise";
 			// 
-			// button15
+			// label56
 			// 
-			this->button15->Location = System::Drawing::Point(584, 271);
-			this->button15->Name = L"button15";
-			this->button15->Size = System::Drawing::Size(145, 52);
-			this->button15->TabIndex = 19;
-			this->button15->Text = L"Identifier les 10 articles les moins vendus";
-			this->button15->UseVisualStyleBackColor = true;
+			this->label56->AutoSize = true;
+			this->label56->Location = System::Drawing::Point(434, 625);
+			this->label56->Name = L"label56";
+			this->label56->Size = System::Drawing::Size(74, 17);
+			this->label56->TabIndex = 68;
+			this->label56->Text = L"Démarque";
 			// 
-			// button14
+			// label51
 			// 
-			this->button14->Location = System::Drawing::Point(552, 349);
-			this->button14->Name = L"button14";
-			this->button14->Size = System::Drawing::Size(177, 203);
-			this->button14->TabIndex = 18;
-			this->button14->Text = L" Simuler des variations de valeurs commerciales pour en déduire la valeur du stoc"
+			this->label51->AutoSize = true;
+			this->label51->Location = System::Drawing::Point(254, 625);
+			this->label51->Name = L"label51";
+			this->label51->Size = System::Drawing::Size(131, 17);
+			this->label51->TabIndex = 68;
+			this->label51->Text = L"Marge commerciale";
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Location = System::Drawing::Point(126, 625);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(35, 17);
+			this->label15->TabIndex = 68;
+			this->label15->Text = L"TVA";
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Underline)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->label14->Location = System::Drawing::Point(328, 576);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(83, 17);
+			this->label14->TabIndex = 67;
+			this->label14->Text = L"Simulation";
+			// 
+			// textBoxIDStat
+			// 
+			this->textBoxIDStat->Location = System::Drawing::Point(490, 484);
+			this->textBoxIDStat->Name = L"textBoxIDStat";
+			this->textBoxIDStat->Size = System::Drawing::Size(81, 22);
+			this->textBoxIDStat->TabIndex = 23;
+			// 
+			// numericUpDownRemiseStat
+			// 
+			this->numericUpDownRemiseStat->DecimalPlaces = 2;
+			this->numericUpDownRemiseStat->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
+			this->numericUpDownRemiseStat->Location = System::Drawing::Point(594, 662);
+			this->numericUpDownRemiseStat->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 0, 0, 0, 0 });
+			this->numericUpDownRemiseStat->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, System::Int32::MinValue });
+			this->numericUpDownRemiseStat->Name = L"numericUpDownRemiseStat";
+			this->numericUpDownRemiseStat->Size = System::Drawing::Size(68, 22);
+			this->numericUpDownRemiseStat->TabIndex = 22;
+			// 
+			// numericUpDownDemarqueStat
+			// 
+			this->numericUpDownDemarqueStat->DecimalPlaces = 2;
+			this->numericUpDownDemarqueStat->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
+			this->numericUpDownDemarqueStat->Location = System::Drawing::Point(437, 662);
+			this->numericUpDownDemarqueStat->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 0, 0, 0, 0 });
+			this->numericUpDownDemarqueStat->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, System::Int32::MinValue });
+			this->numericUpDownDemarqueStat->Name = L"numericUpDownDemarqueStat";
+			this->numericUpDownDemarqueStat->Size = System::Drawing::Size(68, 22);
+			this->numericUpDownDemarqueStat->TabIndex = 22;
+			// 
+			// numericUpDownMargeStat
+			// 
+			this->numericUpDownMargeStat->DecimalPlaces = 2;
+			this->numericUpDownMargeStat->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
+			this->numericUpDownMargeStat->Location = System::Drawing::Point(264, 662);
+			this->numericUpDownMargeStat->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDownMargeStat->Name = L"numericUpDownMargeStat";
+			this->numericUpDownMargeStat->Size = System::Drawing::Size(68, 22);
+			this->numericUpDownMargeStat->TabIndex = 22;
+			// 
+			// numericUpDownTVAStat
+			// 
+			this->numericUpDownTVAStat->DecimalPlaces = 2;
+			this->numericUpDownTVAStat->Increment = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 131072 });
+			this->numericUpDownTVAStat->Location = System::Drawing::Point(110, 662);
+			this->numericUpDownTVAStat->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDownTVAStat->Name = L"numericUpDownTVAStat";
+			this->numericUpDownTVAStat->Size = System::Drawing::Size(68, 22);
+			this->numericUpDownTVAStat->TabIndex = 22;
+			// 
+			// numericUpDownMoisStat
+			// 
+			this->numericUpDownMoisStat->Location = System::Drawing::Point(493, 408);
+			this->numericUpDownMoisStat->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 12, 0, 0, 0 });
+			this->numericUpDownMoisStat->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			this->numericUpDownMoisStat->Name = L"numericUpDownMoisStat";
+			this->numericUpDownMoisStat->Size = System::Drawing::Size(78, 22);
+			this->numericUpDownMoisStat->TabIndex = 22;
+			this->numericUpDownMoisStat->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
+			// 
+			// label13
+			// 
+			this->label13->AutoSize = true;
+			this->label13->Location = System::Drawing::Point(434, 484);
+			this->label13->Name = L"label13";
+			this->label13->Size = System::Drawing::Size(21, 17);
+			this->label13->TabIndex = 21;
+			this->label13->Text = L"ID";
+			// 
+			// label12
+			// 
+			this->label12->AutoSize = true;
+			this->label12->Location = System::Drawing::Point(434, 410);
+			this->label12->Name = L"label12";
+			this->label12->Size = System::Drawing::Size(37, 17);
+			this->label12->TabIndex = 21;
+			this->label12->Text = L"Mois";
+			// 
+			// articlePlusVendusButton
+			// 
+			this->articlePlusVendusButton->Location = System::Drawing::Point(434, 91);
+			this->articlePlusVendusButton->Name = L"articlePlusVendusButton";
+			this->articlePlusVendusButton->Size = System::Drawing::Size(302, 35);
+			this->articlePlusVendusButton->TabIndex = 20;
+			this->articlePlusVendusButton->Text = L"Identifier les 10 articles les plus vendus";
+			this->articlePlusVendusButton->UseVisualStyleBackColor = true;
+			this->articlePlusVendusButton->Click += gcnew System::EventHandler(this, &MyForm::articlePlusVendusButton_Click);
+			// 
+			// articleMoinsVendusButton
+			// 
+			this->articleMoinsVendusButton->Location = System::Drawing::Point(434, 157);
+			this->articleMoinsVendusButton->Name = L"articleMoinsVendusButton";
+			this->articleMoinsVendusButton->Size = System::Drawing::Size(302, 37);
+			this->articleMoinsVendusButton->TabIndex = 19;
+			this->articleMoinsVendusButton->Text = L"Identifier les 10 articles les moins vendus";
+			this->articleMoinsVendusButton->UseVisualStyleBackColor = true;
+			this->articleMoinsVendusButton->Click += gcnew System::EventHandler(this, &MyForm::articleMoinsVendusButton_Click);
+			// 
+			// simulationButton
+			// 
+			this->simulationButton->Location = System::Drawing::Point(110, 724);
+			this->simulationButton->Name = L"simulationButton";
+			this->simulationButton->Size = System::Drawing::Size(552, 48);
+			this->simulationButton->TabIndex = 18;
+			this->simulationButton->Text = L" Simuler des variations de valeurs commerciales pour en déduire la valeur du stoc"
 				L"k";
-			this->button14->UseVisualStyleBackColor = true;
+			this->simulationButton->UseVisualStyleBackColor = true;
+			this->simulationButton->Click += gcnew System::EventHandler(this, &MyForm::simulationButton_Click);
 			// 
-			// button13
+			// seuilButton
 			// 
-			this->button13->Location = System::Drawing::Point(584, 36);
-			this->button13->Name = L"button13";
-			this->button13->Size = System::Drawing::Size(145, 81);
-			this->button13->TabIndex = 17;
-			this->button13->Text = L"Identifier les produitds sous le seuim de réaprovisionnement";
-			this->button13->UseVisualStyleBackColor = true;
+			this->seuilButton->Location = System::Drawing::Point(434, 7);
+			this->seuilButton->Name = L"seuilButton";
+			this->seuilButton->Size = System::Drawing::Size(302, 50);
+			this->seuilButton->TabIndex = 17;
+			this->seuilButton->Text = L"Identifier les produits sous le seuil de réaprovisionnement";
+			this->seuilButton->UseVisualStyleBackColor = true;
+			this->seuilButton->Click += gcnew System::EventHandler(this, &MyForm::seuilButton_Click);
 			// 
-			// button12
+			// achatButton
 			// 
-			this->button12->Location = System::Drawing::Point(261, 349);
-			this->button12->Name = L"button12";
-			this->button12->Size = System::Drawing::Size(189, 83);
-			this->button12->TabIndex = 16;
-			this->button12->Text = L"Calcul du montant des achats ppour un client";
-			this->button12->UseVisualStyleBackColor = true;
+			this->achatButton->Location = System::Drawing::Point(8, 469);
+			this->achatButton->Name = L"achatButton";
+			this->achatButton->Size = System::Drawing::Size(419, 53);
+			this->achatButton->TabIndex = 16;
+			this->achatButton->Text = L"Calcul du montant des achats pour un client";
+			this->achatButton->UseVisualStyleBackColor = true;
+			this->achatButton->Click += gcnew System::EventHandler(this, &MyForm::achatButton_Click);
 			// 
-			// button11
+			// valeurAchatStockButton
 			// 
-			this->button11->Location = System::Drawing::Point(261, 472);
-			this->button11->Name = L"button11";
-			this->button11->Size = System::Drawing::Size(189, 83);
-			this->button11->TabIndex = 15;
-			this->button11->Text = L"Calculer la valeur commerciale du stock";
-			this->button11->UseVisualStyleBackColor = true;
+			this->valeurAchatStockButton->Location = System::Drawing::Point(434, 274);
+			this->valeurAchatStockButton->Name = L"valeurAchatStockButton";
+			this->valeurAchatStockButton->Size = System::Drawing::Size(302, 38);
+			this->valeurAchatStockButton->TabIndex = 15;
+			this->valeurAchatStockButton->Text = L"Calculer la valeur d\'achat du stock";
+			this->valeurAchatStockButton->UseVisualStyleBackColor = true;
+			this->valeurAchatStockButton->Click += gcnew System::EventHandler(this, &MyForm::valeurAchatStockButton_Click);
 			// 
-			// button10
+			// valeurComStockButton
 			// 
-			this->button10->Location = System::Drawing::Point(11, 472);
-			this->button10->Name = L"button10";
-			this->button10->Size = System::Drawing::Size(173, 83);
-			this->button10->TabIndex = 14;
-			this->button10->Text = L"Calculer le chiffre d\'affaire sur un mois en particulier";
-			this->button10->UseVisualStyleBackColor = true;
+			this->valeurComStockButton->Location = System::Drawing::Point(434, 217);
+			this->valeurComStockButton->Name = L"valeurComStockButton";
+			this->valeurComStockButton->Size = System::Drawing::Size(302, 38);
+			this->valeurComStockButton->TabIndex = 15;
+			this->valeurComStockButton->Text = L"Calculer la valeur commerciale du stock";
+			this->valeurComStockButton->UseVisualStyleBackColor = true;
+			this->valeurComStockButton->Click += gcnew System::EventHandler(this, &MyForm::valeurStockButton_Click);
 			// 
-			// button9
+			// CAButton
 			// 
-			this->button9->Location = System::Drawing::Point(11, 349);
-			this->button9->Name = L"button9";
-			this->button9->Size = System::Drawing::Size(173, 83);
-			this->button9->TabIndex = 13;
-			this->button9->Text = L"Calculer le panier moyen après remise";
-			this->button9->UseVisualStyleBackColor = true;
+			this->CAButton->Location = System::Drawing::Point(8, 392);
+			this->CAButton->Name = L"CAButton";
+			this->CAButton->Size = System::Drawing::Size(419, 52);
+			this->CAButton->TabIndex = 14;
+			this->CAButton->Text = L"Calculer le chiffre d\'affaire sur un mois en particulier";
+			this->CAButton->UseVisualStyleBackColor = true;
+			this->CAButton->Click += gcnew System::EventHandler(this, &MyForm::CAButton_Click);
 			// 
-			// dataGridView3
+			// panierMoyenButton
 			// 
-			this->dataGridView3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView3->Location = System::Drawing::Point(11, 42);
-			this->dataGridView3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->dataGridView3->Name = L"dataGridView3";
-			this->dataGridView3->RowHeadersWidth = 51;
-			this->dataGridView3->Size = System::Drawing::Size(541, 288);
-			this->dataGridView3->TabIndex = 12;
+			this->panierMoyenButton->Location = System::Drawing::Point(434, 330);
+			this->panierMoyenButton->Name = L"panierMoyenButton";
+			this->panierMoyenButton->Size = System::Drawing::Size(302, 42);
+			this->panierMoyenButton->TabIndex = 13;
+			this->panierMoyenButton->Text = L"Calculer le panier moyen après remise";
+			this->panierMoyenButton->UseVisualStyleBackColor = true;
+			this->panierMoyenButton->Click += gcnew System::EventHandler(this, &MyForm::panierMoyenButton_Click);
+			// 
+			// dgv_enr_stat
+			// 
+			this->dgv_enr_stat->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dgv_enr_stat->Location = System::Drawing::Point(4, 7);
+			this->dgv_enr_stat->Margin = System::Windows::Forms::Padding(4);
+			this->dgv_enr_stat->Name = L"dgv_enr_stat";
+			this->dgv_enr_stat->RowHeadersWidth = 51;
+			this->dgv_enr_stat->Size = System::Drawing::Size(423, 365);
+			this->dgv_enr_stat->TabIndex = 12;
 			// 
 			// MyForm
 			// 
@@ -2234,7 +2430,7 @@ private: System::Windows::Forms::Label^ label11;
 			this->ClientSize = System::Drawing::Size(752, 846);
 			this->Controls->Add(ClientTabControl);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::Fixed3D;
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Recherche client";
@@ -2284,7 +2480,13 @@ private: System::Windows::Forms::Label^ label11;
 			this->tabPage14->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr_commande))->EndInit();
 			this->tabPage4->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->EndInit();
+			this->tabPage4->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownRemiseStat))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownDemarqueStat))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownMargeStat))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownTVAStat))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDownMoisStat))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgv_enr_stat))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -2394,32 +2596,113 @@ private: System::Windows::Forms::Label^ label11;
 		this->dgv_enr_stock->DataSource = this->oDs;
 		this->dgv_enr_stock->DataMember = "C";
 	}
-/*private: System::Void btn_load_commande_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->dgv_enr_commande->Refresh();
-	//this->oDs = this->oSvc->selectionnerClient("A");
-	//this->oDs = this->oSvc->
-	this->dgv_enr_commande->DataSource = this->oDs;
-	this->dgv_enr_commande->DataMember = "A";
-}*/
-private: System::Void insertButtonStock_Click(System::Object^ sender, System::EventArgs^ e) {
-	    this->oSvc->ajouterstock(
-		this->textBoxNomStockInsert->Text,
-		this->textBoxQuantSStockInsert->Text,
-		this->textBoxPrixProStockInsert->Text,
-		this->textBoxSeuilReapStockInsert->Text);
+	private: System::Void btn_load_commande_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->dgv_enr_commande->Refresh();
+		this->oDs = this->oSvc->selectionnerCommande("A", textBoxIDClientCommande->Text);
+		this->dgv_enr_commande->DataSource = this->oDs;
+		this->dgv_enr_commande->DataMember = "A";
+	}
+	private: System::Void insertButtonStock_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->oSvc->ajouterstock(
+			this->textBoxNomStockInsert->Text,
+			this->textBoxQuantSStockInsert->Text,
+			this->textBoxPrixProStockInsert->Text,
+			this->textBoxSeuilReapStockInsert->Text);
 
 		btn_load_stock_Click(sender, e);
-	resetInput();
-}
-private: System::Void updateButtonStock_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->oSvc->modifierStock(this->textBoxRefStockUpdate->Text,
-		this->textBoxQuantSStockUpdate->Text,
-		this->textBoxPrixProStockUpdate->Text,
-		this->textBoxSeuilReapStockUpdate->Text,
-	);
-	btn_load_client_Click(sender, e);
-	resetInput();
+		resetInput();
+	}
+	private: System::Void updateButtonStock_Click(System::Object^ sender, System::EventArgs^ e) {
+		/*this->oSvc->modifierStock(this->textBoxRefStockUpdate->Text,
+			this->textBoxQuantSStockUpdate->Text,
+			this->textBoxPrixProStockUpdate->Text,
+			this->textBoxSeuilReapStockUpdate->Text,
+			);
+		btn_load_client_Click(sender, e);
+		resetInput();*/
+	}
 
-}
+	private: Void resetDataGridStat() {
+		this->dgv_enr_stat->CancelEdit();
+		this->dgv_enr_stat->DataSource = nullptr;
+		this->dgv_enr_stat->Rows->Clear();
+		this->dgv_enr_stat->Columns->Clear();
+		this->dgv_enr_stat->DataSource = nullptr;
+	}
+
+	private: System::Void seuilButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		resetDataGridStat();
+		this->dgv_enr_stat->Refresh();
+		this->oDs = this->oSvc->articleSousSeuil("A");
+		this->dgv_enr_stat->DataSource = this->oDs;
+		this->dgv_enr_stat->DataMember = "A";
+	}
+
+	private: System::Void articlePlusVendusButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		resetDataGridStat();
+		this->dgv_enr_stat->Refresh();
+		this->oDs = this->oSvc->articlePlusVendus("B");
+		this->dgv_enr_stat->DataSource = this->oDs;
+		this->dgv_enr_stat->DataMember = "B";
+	}
+
+	private: System::Void articleMoinsVendusButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		resetDataGridStat();
+		this->dgv_enr_stat->Refresh();
+		this->oDs = this->oSvc->articleMoinsVendus("C");
+		this->dgv_enr_stat->DataSource = this->oDs;
+		this->dgv_enr_stat->DataMember = "C";
+	}
+
+	private: System::Void valeurStockButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		resetDataGridStat();
+		this->dgv_enr_stat->Refresh();
+		this->oDs = this->oSvc->calculerValeurCommercialStock("D");
+		this->dgv_enr_stat->DataSource = this->oDs;
+		this->dgv_enr_stat->DataMember = "D";
+	}
+
+	private: System::Void panierMoyenButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		resetDataGridStat();
+		this->dgv_enr_stat->Refresh();
+		this->oDs = this->oSvc->calculerPanierMoyen("E");
+		this->dgv_enr_stat->DataSource = this->oDs;
+		this->dgv_enr_stat->DataMember = "E";
+	}
+
+	private: System::Void CAButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		resetDataGridStat();
+		this->dgv_enr_stat->Refresh();
+		this->oDs = this->oSvc->calculerCAParMois("F", this->numericUpDownMoisStat->Text);
+		this->dgv_enr_stat->DataSource = this->oDs;
+		this->dgv_enr_stat->DataMember = "F";
+	}
+
+	private: System::Void achatButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		resetDataGridStat();
+		this->dgv_enr_stat->Refresh();
+		this->oDs = this->oSvc->calculerMontantTotalClient("G", this->textBoxIDStat->Text);
+		this->dgv_enr_stat->DataSource = this->oDs;
+		this->dgv_enr_stat->DataMember = "G";
+	}
+
+	private: System::Void simulationButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		resetDataGridStat();
+		this->dgv_enr_stat->Refresh();
+		this->oDs = this->oSvc->simulerValeurCommerciale("H", numericUpDownTVAStat->Text,
+			numericUpDownMargeStat->Text,
+			numericUpDownDemarqueStat->Text,
+			numericUpDownRemiseStat->Text);
+		this->dgv_enr_stat->DataSource = this->oDs;
+		this->dgv_enr_stat->DataMember = "H";
+	}
+
+	private: System::Void valeurAchatStockButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		resetDataGridStat();
+		this->dgv_enr_stat->Refresh();
+		this->oDs = this->oSvc->calculerValeurAchatStock("I");
+		this->dgv_enr_stat->DataSource = this->oDs;
+		this->dgv_enr_stat->DataMember = "I";
+	}
 };
 }

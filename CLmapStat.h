@@ -5,7 +5,7 @@ using System::String;
 
 namespace NS_Comp_Mappage
 {
-	public ref class CLmapstock
+	public ref class CLmapStat
 	{
 	protected:
 

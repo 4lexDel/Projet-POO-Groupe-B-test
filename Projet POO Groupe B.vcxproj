@@ -136,6 +136,8 @@
   <ItemGroup>
     <ClInclude Include="CLcad.h" />
     <ClInclude Include="CLmapClient.h" />
+    <ClInclude Include="CLmappCommande.h" />
+    <ClInclude Include="CLmapStat.h" />
     <ClInclude Include="CLmapstock.h" />
     <ClInclude Include="CLmapTB.h" />
     <ClInclude Include="CLservice.h" />

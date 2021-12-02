@@ -3,7 +3,7 @@
 String^ NS_Comp_Mappage::CLmappCommande::Select(void)
 {
     /*return "select A.refCommande, A.dateLivraison ,A.dateEmission,numeroClient from commande "*/
-    return "select NumeroClient, Commande.RefCommande, DateLivraison, DateEmission, Nom, NombreArticle, PrixUHT from Commande join Composer on Commande.RefCommande = Composer.RefCommande join Article on Article.Reference = Composer.Reference where NumeroClient = this->numeroClient order by Commande.RefCommande asc ";
+    return "select NumeroClient, Commande.RefCommande, DateLivraison, DateEmission, Nom, NombreArticle, PrixUHT from Commande join Composer on Commande.RefCommande = Composer.RefCommande join Article on Article.Reference = Composer.Reference where NumeroClient = "+this->numeroClient +" order by Commande.RefCommande asc ";
 }
 
 String^ NS_Comp_Mappage::CLmappCommande::Insert(void)
