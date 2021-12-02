@@ -88,47 +88,50 @@ void NS_Comp_Svc::CLservices::modifierClient(String^ ID, String^ nom, String^ pr
 
 System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerstock(String^ dataName)
 {
-	String^ sql1;
+	String^ sql;
 
-	sql1 = oMappstock->Select();
-	return this->oCad->getRows(sql1, dataName);
+	sql = oMappstock->Select();
+	return this->oCad->getRows(sql, dataName);
 }
 
-void NS_Comp_Svc::CLservices::ajouterstock(String^ nom, String^ quantitestock, String^ prixproduit, String^ seuilreapprovisionnement)
+void NS_Comp_Svc::CLservices::ajouterstock(String^ nom,   String^ quantitestock, String^ prixproduit, String^ seuilreapprovisionnement , String^ prixachat)
 {
-	String^ sql1;
-
+	String^ sql;
+	
 	oMappstock->setnom(nom);
-	oMappstock->setprixproduit(prixproduit);
 	oMappstock->setquantitestock(quantitestock);
+	oMappstock->setprixproduit(prixproduit);
 	oMappstock->setseuilreapprovisionnement(seuilreapprovisionnement);
+	oMappstock->setprixachat(prixachat);
 
-	sql1 = this->oMappstock->Insert();
+	sql = this->oMappstock->Insert();
 
-	this->oCad->actionRows(sql1);
+	this->oCad->actionRows(sql);
 }
 
 void NS_Comp_Svc::CLservices::supprimerstock(String^ ID)
 {
-	String^ sql1;
+	String^ sql;
 	oMappstock->setreference(ID);
 	//this->oMappTB->setId(int::Parse(ID));
-	sql1 = this->oMappstock->Delete();
+	sql = this->oMappstock->Delete();
 
-	this->oCad->actionRows(sql1);
+	this->oCad->actionRows(sql);
 }
 
-void NS_Comp_Svc::CLservices::modifierstock(String^ ID, String^quantitestock, String^prixproduit, String^seuilreapprovisionnement)
+void NS_Comp_Svc::CLservices::modifierstock(String^ ID, String^quantitestock, String^prixproduit, String^seuilreapprovisionnement, String^ prixachat)
 {
-	String^ sql1;
+	String^ sql;
 
 	oMappstock->setreference(ID);
-	oMappstock->setseuilreapprovisionnement(seuilreapprovisionnement);
 	oMappstock->setquantitestock(quantitestock);
 	oMappstock->setprixproduit(prixproduit);
-	sql1 = oMappstock->Update();
+	oMappstock->setseuilreapprovisionnement(seuilreapprovisionnement);
+	oMappstock->setprixachat(prixachat);
 
-	this->oCad->actionRows(sql1);
+	sql = oMappstock->Update();
+
+	this->oCad->actionRows(sql);
 }
 
 #pragma endregion
@@ -137,15 +140,15 @@ void NS_Comp_Svc::CLservices::modifierstock(String^ ID, String^quantitestock, St
 
 System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerPersonnel(String^ dataName)
 {
-	String^ sql2;
+	String^ sql;
 
-	sql2 = oMappPersonnel->Select();
-	return this->oCad->getRows(sql2, dataName);
+	sql = oMappPersonnel->Select();
+	return this->oCad->getRows(sql, dataName);
 }
 
 void NS_Comp_Svc::CLservices::ajouterPersonnel(String^nom, String^prenom, String^dateEmbauche, String^ numero, String^ adresse, String^ ville, String^ IDSupPersonnel)
 {
-	String^ sql2;
+	String^ sql;
 
 	oMappPersonnel->setNom(nom);
 	oMappPersonnel->setPrenom(prenom);
@@ -156,25 +159,25 @@ void NS_Comp_Svc::CLservices::ajouterPersonnel(String^nom, String^prenom, String
 	oMappPersonnel->setVille(ville);
 	oMappPersonnel->setIDSupPersonnel(IDSupPersonnel);
 
-	sql2 = this->oMappPersonnel->Insert();
+	sql = this->oMappPersonnel->Insert();
 
-	this->oCad->actionRows(sql2);
+	this->oCad->actionRows(sql);
 }
 
 void NS_Comp_Svc::CLservices::supprimerPersonnel(String^ID)
 {
-	String^ sql2;
+	String^ sql;
 
 	oMappPersonnel->setIDPersonnel(ID);
 	//this->oMappTB->setId(int::Parse(ID));
-	sql2 = this->oMappPersonnel->Delete();
+	sql = this->oMappPersonnel->Delete();
 
-	this->oCad->actionRows(sql2);
+	this->oCad->actionRows(sql);
 }
 
 void NS_Comp_Svc::CLservices::modifierPersonnel(String^ ID, String^ nom, String^ prenom, String^ dateEmbauche, String^ numero, String^ adresse, String^ ville, String^ IDSupPersonnel)
 {
-	String^ sql2; 
+	String^ sql; 
 	oMappPersonnel->setIDPersonnel(ID);
 
 	oMappPersonnel->setNom(nom);
@@ -187,9 +190,9 @@ void NS_Comp_Svc::CLservices::modifierPersonnel(String^ ID, String^ nom, String^
 
 	oMappPersonnel->setIDSupPersonnel(IDSupPersonnel);
 
-	sql2 = oMappPersonnel->Update();
+	sql = oMappPersonnel->Update();
 
-	this->oCad->actionRows(sql2);
+	this->oCad->actionRows(sql);
 }
 
 System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerCommande(String^ dataName, String^ IDClient)
