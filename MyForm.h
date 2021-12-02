@@ -1902,6 +1902,7 @@ private: System::Windows::Forms::Button^ valeurAchatStockButton;
 			this->deleteButtonStock->TabIndex = 3;
 			this->deleteButtonStock->Text = L"DELETE";
 			this->deleteButtonStock->UseVisualStyleBackColor = true;
+			this->deleteButtonStock->Click += gcnew System::EventHandler(this, &MyForm::deleteButtonStock_Click);
 			// 
 			// dgv_enr_stock
 			// 
@@ -2592,7 +2593,7 @@ private: System::Windows::Forms::Button^ valeurAchatStockButton;
 
 	private: System::Void btn_load_stock_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->dgv_enr_stock->Refresh();
-		this->oDs = this->oSvc->selectionnerStock("C");
+		this->oDs = this->oSvc->selectionnerstock("C");
 		this->dgv_enr_stock->DataSource = this->oDs;
 		this->dgv_enr_stock->DataMember = "C";
 	}
@@ -2697,6 +2698,11 @@ private: System::Windows::Forms::Button^ valeurAchatStockButton;
 		this->dgv_enr_stat->DataMember = "H";
 	}
 
+private: System::Void deleteButtonStock_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->oSvc->supprimerstock(this->textBoxRefCComDelete->Text);
+	btn_load_stock_Click(sender, e);
+	resetInput();
+}
 	private: System::Void valeurAchatStockButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		resetDataGridStat();
 		this->dgv_enr_stat->Refresh();
