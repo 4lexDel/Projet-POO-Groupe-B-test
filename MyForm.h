@@ -2,6 +2,7 @@
 #pragma once
 #include "CLservice.h"
 
+
 namespace ProjetPOOGroupeB {
 
 	using namespace System;
@@ -40,6 +41,8 @@ namespace ProjetPOOGroupeB {
 #pragma region declaration components
 
 	protected:
+
+	private: delegate void FuncVersionDisplay(String^ message);
 
 	private: NS_Comp_Svc::CLservices^ oSvc;
 	private: System::Data::DataSet^ oDs;
@@ -413,11 +416,11 @@ namespace ProjetPOOGroupeB {
 	private: System::Windows::Forms::Label^ label68;
 	private: System::Windows::Forms::TextBox^ textBoxRefArtPanier;
 	private: System::Windows::Forms::Label^ label69;
-private: System::Windows::Forms::Button^ buttonSupprimerPanier;
+	private: System::Windows::Forms::Button^ buttonSupprimerPanier;
 
 	private: System::Windows::Forms::Label^ label70;
-private: System::Windows::Forms::TextBox^ textBoxCouleurPanier;
-private: System::Windows::Forms::Label^ label62;
+	private: System::Windows::Forms::TextBox^ textBoxCouleurPanier;
+	private: System::Windows::Forms::Label^ label62;
 
 
 
@@ -2740,6 +2743,14 @@ private: System::Windows::Forms::Label^ label62;
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
 	{
 		this->oSvc = gcnew NS_Comp_Svc::CLservices();
+
+		FuncVersionDisplay^ versionMessage = gcnew FuncVersionDisplay(this, &MyForm::displayVersion);
+
+		versionMessage->Invoke("Version 1.0 Projet POO CESI");
+	}
+
+	private: void displayVersion(String^ message) {
+		MessageBox::Show(message);
 	}
 
 	private:void resetInput() {
@@ -2980,28 +2991,28 @@ private: System::Windows::Forms::Label^ label62;
 		resetInput();
 	}
 
-	/*private: System::Void initComboBoxPanier() {
-		DataGridView^ dgv_recup_article = gcnew DataGridView();
+		   /*private: System::Void initComboBoxPanier() {
+			   DataGridView^ dgv_recup_article = gcnew DataGridView();
 
-		dgv_recup_article->Refresh();
-		this->oDs = this->oSvc->selectionnerNomArticle("AA");
+			   dgv_recup_article->Refresh();
+			   this->oDs = this->oSvc->selectionnerNomArticle("AA");
 
-		//System::Windows::Forms::MessageBox::Show(oDs->Tables->ToString().);
+			   //System::Windows::Forms::MessageBox::Show(oDs->Tables->ToString().);
 
-		dgv_recup_article->DataSource = this->oDs;
-		dgv_recup_article->DataMember = "AA";
+			   dgv_recup_article->DataSource = this->oDs;
+			   dgv_recup_article->DataMember = "AA";
 
-		int nb = int::Parse(dgv_recup_article->Rows->Count.ToString());
+			   int nb = int::Parse(dgv_recup_article->Rows->Count.ToString());
 
-		System::Windows::Forms::MessageBox::Show(nb.ToString());
+			   System::Windows::Forms::MessageBox::Show(nb.ToString());
 
-		for (int i = 0; i < nb; i++)
-		{
-			String^ data = dgv_recup_article->Rows[i]->Cells["Nom"]->Value->ToString();
-			comboBoxArticlePanier->Items->Add(data);
-		}	
-		comboBoxArticlePanier->Items->Add("Hé salut !");
-	}*/
+			   for (int i = 0; i < nb; i++)
+			   {
+				   String^ data = dgv_recup_article->Rows[i]->Cells["Nom"]->Value->ToString();
+				   comboBoxArticlePanier->Items->Add(data);
+			   }
+			   comboBoxArticlePanier->Items->Add("Hé salut !");
+		   }*/
 	private: System::Void buttonAjouterPanier_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->oSvc->ajouterPanier(
 			this->textBoxRefComPanier->Text,
@@ -3012,13 +3023,13 @@ private: System::Windows::Forms::Label^ label62;
 		btn_load_commande_Click(sender, e);
 		resetInput();
 	}
-private: System::Void buttonSupprimerPanier_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->oSvc->supprimerPanier(
-		this->textBoxRefComPanier->Text,
-		this->textBoxRefArtPanier->Text);
+	private: System::Void buttonSupprimerPanier_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->oSvc->supprimerPanier(
+			this->textBoxRefComPanier->Text,
+			this->textBoxRefArtPanier->Text);
 
-	btn_load_commande_Click(sender, e);
-	resetInput();
-}
-};
+		btn_load_commande_Click(sender, e);
+		resetInput();
+	}
+	};
 }
