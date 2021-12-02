@@ -201,6 +201,39 @@ System::Data::DataSet^ NS_Comp_Svc::CLservices::selectionnerCommande(String^ dat
 	return this->oCad->getRows(sql, dataName);
 }
 
+void NS_Comp_Svc::CLservices::ajouterCommande(String^ IDClient, String^ dateLivraison)
+{
+	String^ sql1;
+
+	oMappCommande->setNumeroClient(IDClient);
+	oMappCommande->setDateLivraison(dateLivraison);
+
+	sql1 = this->oMappCommande->Insert();
+
+	this->oCad->actionRows(sql1);
+}
+
+void NS_Comp_Svc::CLservices::supprimerCommande(String^ IDCommande)
+{
+	String^ sql2;
+
+	oMappCommande->setRefCommande(IDCommande);
+	sql2 = this->oMappCommande->Delete();
+
+	this->oCad->actionRows(sql2);
+}
+
+void NS_Comp_Svc::CLservices::modifierCommande(String^ IDCommande, String^ dateLivraison)
+{
+	String^ sql2;
+	oMappCommande->setRefCommande(IDCommande);
+	oMappCommande->setDateLivraison(dateLivraison);
+
+	sql2 = oMappCommande->Update();
+
+	this->oCad->actionRows(sql2);
+}
+
 System::Data::DataSet^ NS_Comp_Svc::CLservices::calculerPanierMoyen(String^ dataName)
 {
 	String^ sql;

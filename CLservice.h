@@ -42,11 +42,9 @@ namespace NS_Comp_Svc
 		void modifierPersonnel(String^, String^, String^, String^, String^, String^, String^, String^);
 
 		System::Data::DataSet^ selectionnerCommande(String^ dataName, String^ IDClient);
-		/*CLservices(void);
-		System::Data::DataSet^ selectionnerCommande(String^ dataName);
-		void ajouterCommande(String^, String^, String^, String^, String^, String^, String^, String^, String^);
-		void supprimerCommande(String^);
-		void modifierCommande(String^, String^, String^, String^, String^, String^, String^, String^, String^, String^);*/
+		void ajouterCommande(String^ IDClient, String^ dateLivraison);
+		void supprimerCommande(String^ IDCommande);
+		void modifierCommande(String^ IDCommande, String^ dateLivraison);
 
 		System::Data::DataSet^ calculerPanierMoyen(String^ dataName);
 		System::Data::DataSet^ calculerCAParMois(String^ dataName, String^ mois);

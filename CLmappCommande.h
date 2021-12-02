@@ -9,12 +9,13 @@ namespace NS_Comp_Mappage
 	{
 		String^ sSql;
 
+		String^ IDClient;
+
 		String^ refCommande;
 		String^ dateLivraison;
 		String^ dateEmission;
 
-		String^ numeroClient;
-		
+		String^ modePaiement;
 
 	public:
 		String^ Select(void) new;
@@ -24,7 +25,7 @@ namespace NS_Comp_Mappage
 
 		void setRefCommande(String^);
 		void setDateLivraison(String^);
-		void setDateEmiision(String^);
+		void setDateEmission(String^);
 
 		void setNumeroClient(String^);
 	

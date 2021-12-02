@@ -118,7 +118,7 @@ namespace ProjetPOOGroupeB {
 
 	private: System::Windows::Forms::Button^ seuilButton;
 	private: System::Windows::Forms::Button^ achatButton;
-private: System::Windows::Forms::Button^ valeurComStockButton;
+	private: System::Windows::Forms::Button^ valeurComStockButton;
 
 
 
@@ -317,10 +317,11 @@ private: System::Windows::Forms::Button^ valeurComStockButton;
 	private: System::Windows::Forms::TextBox^ textBoxSeuilReapStockUpdate;
 	private: System::Windows::Forms::TabControl^ tabControl4;
 	private: System::Windows::Forms::TabPage^ tabPage12;
-	private: System::Windows::Forms::Label^ label58;
-	private: System::Windows::Forms::TextBox^ textBoxDateEmiComInsert;
+	private: System::Windows::Forms::TextBox^ textBoxDateLivComInsert;
 
-	private: System::Windows::Forms::TextBox^ textBoxDateLivrComInsert;
+
+
+
 
 
 
@@ -329,6 +330,7 @@ private: System::Windows::Forms::Button^ valeurComStockButton;
 	private: System::Windows::Forms::Button^ insertButtonCommande;
 
 	private: System::Windows::Forms::TabPage^ tabPage13;
+private: System::Windows::Forms::TextBox^ textBoxRefComUpdate;
 
 
 
@@ -343,11 +345,11 @@ private: System::Windows::Forms::Button^ valeurComStockButton;
 
 
 
-	private: System::Windows::Forms::Label^ label71;
-	private: System::Windows::Forms::TextBox^ textBoxRefCComUpdate;
+
+
 
 	private: System::Windows::Forms::Label^ label72;
-	private: System::Windows::Forms::TextBox^ textBoxDateEmiComUpdate;
+
 
 	private: System::Windows::Forms::TextBox^ textBoxDateLivrComUpdate;
 
@@ -357,14 +359,15 @@ private: System::Windows::Forms::Button^ valeurComStockButton;
 
 	private: System::Windows::Forms::Label^ label74;
 	private: System::Windows::Forms::TabPage^ tabPage14;
-	private: System::Windows::Forms::TextBox^ textBoxRefCComDelete;
+private: System::Windows::Forms::TextBox^ textBoxRefComDelete;
+
 
 	private: System::Windows::Forms::Label^ label75;
 	private: System::Windows::Forms::Button^ deleteButtonCommande;
 
 	private: System::Windows::Forms::DataGridView^ dgv_enr_commande;
 	private: System::Windows::Forms::Button^ btn_load_commande;
-private: System::Windows::Forms::TextBox^ textBoxIDClientCommande;
+	private: System::Windows::Forms::TextBox^ textBoxIDClientCommande;
 
 
 	private: System::Windows::Forms::Label^ label11;
@@ -381,7 +384,10 @@ private: System::Windows::Forms::TextBox^ textBoxIDClientCommande;
 	private: System::Windows::Forms::NumericUpDown^ numericUpDownMoisStat;
 	private: System::Windows::Forms::Label^ label13;
 	private: System::Windows::Forms::Label^ label12;
-private: System::Windows::Forms::Button^ valeurAchatStockButton;
+	private: System::Windows::Forms::Button^ valeurAchatStockButton;
+	private: System::Windows::Forms::Label^ label58;
+	private: System::Windows::Forms::TextBox^ textBoxIDComInsert;
+
 
 
 
@@ -544,20 +550,18 @@ private: System::Windows::Forms::Button^ valeurAchatStockButton;
 			this->tabControl4 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage12 = (gcnew System::Windows::Forms::TabPage());
 			this->label58 = (gcnew System::Windows::Forms::Label());
-			this->textBoxDateEmiComInsert = (gcnew System::Windows::Forms::TextBox());
-			this->textBoxDateLivrComInsert = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxDateLivComInsert = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxIDComInsert = (gcnew System::Windows::Forms::TextBox());
 			this->label60 = (gcnew System::Windows::Forms::Label());
 			this->insertButtonCommande = (gcnew System::Windows::Forms::Button());
 			this->tabPage13 = (gcnew System::Windows::Forms::TabPage());
-			this->label71 = (gcnew System::Windows::Forms::Label());
-			this->textBoxRefCComUpdate = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxRefComUpdate = (gcnew System::Windows::Forms::TextBox());
 			this->label72 = (gcnew System::Windows::Forms::Label());
-			this->textBoxDateEmiComUpdate = (gcnew System::Windows::Forms::TextBox());
 			this->textBoxDateLivrComUpdate = (gcnew System::Windows::Forms::TextBox());
 			this->updateButtonCommande = (gcnew System::Windows::Forms::Button());
 			this->label74 = (gcnew System::Windows::Forms::Label());
 			this->tabPage14 = (gcnew System::Windows::Forms::TabPage());
-			this->textBoxRefCComDelete = (gcnew System::Windows::Forms::TextBox());
+			this->textBoxRefComDelete = (gcnew System::Windows::Forms::TextBox());
 			this->label75 = (gcnew System::Windows::Forms::Label());
 			this->deleteButtonCommande = (gcnew System::Windows::Forms::Button());
 			this->dgv_enr_commande = (gcnew System::Windows::Forms::DataGridView());
@@ -1971,8 +1975,8 @@ private: System::Windows::Forms::Button^ valeurAchatStockButton;
 			// tabPage12
 			// 
 			this->tabPage12->Controls->Add(this->label58);
-			this->tabPage12->Controls->Add(this->textBoxDateEmiComInsert);
-			this->tabPage12->Controls->Add(this->textBoxDateLivrComInsert);
+			this->tabPage12->Controls->Add(this->textBoxDateLivComInsert);
+			this->tabPage12->Controls->Add(this->textBoxIDComInsert);
 			this->tabPage12->Controls->Add(this->label60);
 			this->tabPage12->Controls->Add(this->insertButtonCommande);
 			this->tabPage12->Location = System::Drawing::Point(4, 25);
@@ -1986,32 +1990,32 @@ private: System::Windows::Forms::Button^ valeurAchatStockButton;
 			// label58
 			// 
 			this->label58->AutoSize = true;
-			this->label58->Location = System::Drawing::Point(213, 153);
+			this->label58->Location = System::Drawing::Point(214, 58);
 			this->label58->Name = L"label58";
-			this->label58->Size = System::Drawing::Size(260, 17);
-			this->label58->TabIndex = 35;
-			this->label58->Text = L"Date d\'émission (Format : AAAA-MM-JJ)";
+			this->label58->Size = System::Drawing::Size(56, 17);
+			this->label58->TabIndex = 32;
+			this->label58->Text = L"IDClient";
 			// 
-			// textBoxDateEmiComInsert
+			// textBoxDateLivComInsert
 			// 
-			this->textBoxDateEmiComInsert->Location = System::Drawing::Point(216, 173);
-			this->textBoxDateEmiComInsert->Margin = System::Windows::Forms::Padding(4);
-			this->textBoxDateEmiComInsert->Name = L"textBoxDateEmiComInsert";
-			this->textBoxDateEmiComInsert->Size = System::Drawing::Size(220, 22);
-			this->textBoxDateEmiComInsert->TabIndex = 31;
+			this->textBoxDateLivComInsert->Location = System::Drawing::Point(217, 206);
+			this->textBoxDateLivComInsert->Margin = System::Windows::Forms::Padding(4);
+			this->textBoxDateLivComInsert->Name = L"textBoxDateLivComInsert";
+			this->textBoxDateLivComInsert->Size = System::Drawing::Size(263, 22);
+			this->textBoxDateLivComInsert->TabIndex = 30;
 			// 
-			// textBoxDateLivrComInsert
+			// textBoxIDComInsert
 			// 
-			this->textBoxDateLivrComInsert->Location = System::Drawing::Point(216, 89);
-			this->textBoxDateLivrComInsert->Margin = System::Windows::Forms::Padding(4);
-			this->textBoxDateLivrComInsert->Name = L"textBoxDateLivrComInsert";
-			this->textBoxDateLivrComInsert->Size = System::Drawing::Size(220, 22);
-			this->textBoxDateLivrComInsert->TabIndex = 30;
+			this->textBoxIDComInsert->Location = System::Drawing::Point(217, 85);
+			this->textBoxIDComInsert->Margin = System::Windows::Forms::Padding(4);
+			this->textBoxIDComInsert->Name = L"textBoxIDComInsert";
+			this->textBoxIDComInsert->Size = System::Drawing::Size(263, 22);
+			this->textBoxIDComInsert->TabIndex = 31;
 			// 
 			// label60
 			// 
 			this->label60->AutoSize = true;
-			this->label60->Location = System::Drawing::Point(213, 69);
+			this->label60->Location = System::Drawing::Point(214, 186);
 			this->label60->Name = L"label60";
 			this->label60->Size = System::Drawing::Size(266, 17);
 			this->label60->TabIndex = 32;
@@ -2026,13 +2030,12 @@ private: System::Windows::Forms::Button^ valeurAchatStockButton;
 			this->insertButtonCommande->TabIndex = 2;
 			this->insertButtonCommande->Text = L"INSERT";
 			this->insertButtonCommande->UseVisualStyleBackColor = true;
+			this->insertButtonCommande->Click += gcnew System::EventHandler(this, &MyForm::insertButtonCommande_Click);
 			// 
 			// tabPage13
 			// 
-			this->tabPage13->Controls->Add(this->label71);
-			this->tabPage13->Controls->Add(this->textBoxRefCComUpdate);
+			this->tabPage13->Controls->Add(this->textBoxRefComUpdate);
 			this->tabPage13->Controls->Add(this->label72);
-			this->tabPage13->Controls->Add(this->textBoxDateEmiComUpdate);
 			this->tabPage13->Controls->Add(this->textBoxDateLivrComUpdate);
 			this->tabPage13->Controls->Add(this->updateButtonCommande);
 			this->tabPage13->Controls->Add(this->label74);
@@ -2044,43 +2047,26 @@ private: System::Windows::Forms::Button^ valeurAchatStockButton;
 			this->tabPage13->Text = L"Update";
 			this->tabPage13->UseVisualStyleBackColor = true;
 			// 
-			// label71
+			// textBoxRefComUpdate
 			// 
-			this->label71->AutoSize = true;
-			this->label71->Location = System::Drawing::Point(210, 177);
-			this->label71->Name = L"label71";
-			this->label71->Size = System::Drawing::Size(260, 17);
-			this->label71->TabIndex = 21;
-			this->label71->Text = L"Date d\'émission (Format : AAAA-MM-JJ)";
-			// 
-			// textBoxRefCComUpdate
-			// 
-			this->textBoxRefCComUpdate->Location = System::Drawing::Point(213, 44);
-			this->textBoxRefCComUpdate->Margin = System::Windows::Forms::Padding(4);
-			this->textBoxRefCComUpdate->Name = L"textBoxRefCComUpdate";
-			this->textBoxRefCComUpdate->Size = System::Drawing::Size(217, 22);
-			this->textBoxRefCComUpdate->TabIndex = 5;
+			this->textBoxRefComUpdate->Location = System::Drawing::Point(217, 112);
+			this->textBoxRefComUpdate->Margin = System::Windows::Forms::Padding(4);
+			this->textBoxRefComUpdate->Name = L"textBoxRefComUpdate";
+			this->textBoxRefComUpdate->Size = System::Drawing::Size(217, 22);
+			this->textBoxRefComUpdate->TabIndex = 5;
 			// 
 			// label72
 			// 
 			this->label72->AutoSize = true;
-			this->label72->Location = System::Drawing::Point(210, 24);
+			this->label72->Location = System::Drawing::Point(214, 92);
 			this->label72->Name = L"label72";
 			this->label72->Size = System::Drawing::Size(147, 17);
 			this->label72->TabIndex = 8;
 			this->label72->Text = L"Reference commande\r\n";
 			// 
-			// textBoxDateEmiComUpdate
-			// 
-			this->textBoxDateEmiComUpdate->Location = System::Drawing::Point(213, 197);
-			this->textBoxDateEmiComUpdate->Margin = System::Windows::Forms::Padding(4);
-			this->textBoxDateEmiComUpdate->Name = L"textBoxDateEmiComUpdate";
-			this->textBoxDateEmiComUpdate->Size = System::Drawing::Size(220, 22);
-			this->textBoxDateEmiComUpdate->TabIndex = 7;
-			// 
 			// textBoxDateLivrComUpdate
 			// 
-			this->textBoxDateLivrComUpdate->Location = System::Drawing::Point(213, 123);
+			this->textBoxDateLivrComUpdate->Location = System::Drawing::Point(217, 191);
 			this->textBoxDateLivrComUpdate->Margin = System::Windows::Forms::Padding(4);
 			this->textBoxDateLivrComUpdate->Name = L"textBoxDateLivrComUpdate";
 			this->textBoxDateLivrComUpdate->Size = System::Drawing::Size(220, 22);
@@ -2095,11 +2081,12 @@ private: System::Windows::Forms::Button^ valeurAchatStockButton;
 			this->updateButtonCommande->TabIndex = 4;
 			this->updateButtonCommande->Text = L"UPDATE";
 			this->updateButtonCommande->UseVisualStyleBackColor = true;
+			this->updateButtonCommande->Click += gcnew System::EventHandler(this, &MyForm::updateButtonCommande_Click);
 			// 
 			// label74
 			// 
 			this->label74->AutoSize = true;
-			this->label74->Location = System::Drawing::Point(210, 103);
+			this->label74->Location = System::Drawing::Point(214, 171);
 			this->label74->Name = L"label74";
 			this->label74->Size = System::Drawing::Size(266, 17);
 			this->label74->TabIndex = 8;
@@ -2107,7 +2094,7 @@ private: System::Windows::Forms::Button^ valeurAchatStockButton;
 			// 
 			// tabPage14
 			// 
-			this->tabPage14->Controls->Add(this->textBoxRefCComDelete);
+			this->tabPage14->Controls->Add(this->textBoxRefComDelete);
 			this->tabPage14->Controls->Add(this->label75);
 			this->tabPage14->Controls->Add(this->deleteButtonCommande);
 			this->tabPage14->Location = System::Drawing::Point(4, 25);
@@ -2118,13 +2105,13 @@ private: System::Windows::Forms::Button^ valeurAchatStockButton;
 			this->tabPage14->Text = L"Delete";
 			this->tabPage14->UseVisualStyleBackColor = true;
 			// 
-			// textBoxRefCComDelete
+			// textBoxRefComDelete
 			// 
-			this->textBoxRefCComDelete->Location = System::Drawing::Point(157, 141);
-			this->textBoxRefCComDelete->Margin = System::Windows::Forms::Padding(4);
-			this->textBoxRefCComDelete->Name = L"textBoxRefCComDelete";
-			this->textBoxRefCComDelete->Size = System::Drawing::Size(391, 22);
-			this->textBoxRefCComDelete->TabIndex = 9;
+			this->textBoxRefComDelete->Location = System::Drawing::Point(157, 141);
+			this->textBoxRefComDelete->Margin = System::Windows::Forms::Padding(4);
+			this->textBoxRefComDelete->Name = L"textBoxRefComDelete";
+			this->textBoxRefComDelete->Size = System::Drawing::Size(391, 22);
+			this->textBoxRefComDelete->TabIndex = 9;
 			// 
 			// label75
 			// 
@@ -2144,6 +2131,7 @@ private: System::Windows::Forms::Button^ valeurAchatStockButton;
 			this->deleteButtonCommande->TabIndex = 3;
 			this->deleteButtonCommande->Text = L"DELETE";
 			this->deleteButtonCommande->UseVisualStyleBackColor = true;
+			this->deleteButtonCommande->Click += gcnew System::EventHandler(this, &MyForm::deleteButtonCommande_Click);
 			// 
 			// dgv_enr_commande
 			// 
@@ -2599,9 +2587,9 @@ private: System::Windows::Forms::Button^ valeurAchatStockButton;
 	}
 	private: System::Void btn_load_commande_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->dgv_enr_commande->Refresh();
-		this->oDs = this->oSvc->selectionnerCommande("A", textBoxIDClientCommande->Text);
+		this->oDs = this->oSvc->selectionnerCommande("Z", textBoxIDClientCommande->Text);
 		this->dgv_enr_commande->DataSource = this->oDs;
-		this->dgv_enr_commande->DataMember = "A";
+		this->dgv_enr_commande->DataMember = "Z";
 	}
 	private: System::Void insertButtonStock_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->oSvc->ajouterstock(
@@ -2698,11 +2686,11 @@ private: System::Windows::Forms::Button^ valeurAchatStockButton;
 		this->dgv_enr_stat->DataMember = "H";
 	}
 
-private: System::Void deleteButtonStock_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->oSvc->supprimerstock(this->textBoxRefCComDelete->Text);
-	btn_load_stock_Click(sender, e);
-	resetInput();
-}
+	private: System::Void deleteButtonStock_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->oSvc->supprimerstock(this->textBoxRefComDelete->Text);
+		btn_load_stock_Click(sender, e);
+		resetInput();
+	}
 	private: System::Void valeurAchatStockButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		resetDataGridStat();
 		this->dgv_enr_stat->Refresh();
@@ -2710,5 +2698,27 @@ private: System::Void deleteButtonStock_Click(System::Object^ sender, System::Ev
 		this->dgv_enr_stat->DataSource = this->oDs;
 		this->dgv_enr_stat->DataMember = "I";
 	}
+	private: System::Void insertButtonCommande_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->oSvc->ajouterCommande(
+			this->textBoxIDComInsert->Text,
+			this->textBoxDateLivComInsert->Text);
+
+		this->textBoxIDClientCommande->Text = textBoxIDComInsert->Text;
+
+		btn_load_commande_Click(sender, e);
+		resetInput();
+	}
+	private: System::Void deleteButtonCommande_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->oSvc->supprimerCommande(this->textBoxRefComDelete->Text);
+		btn_load_commande_Click(sender, e);
+		resetInput();
+	}
+private: System::Void updateButtonCommande_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->oSvc->modifierCommande(textBoxRefComUpdate->Text,
+		textBoxDateLivrComUpdate->Text);
+
+	//btn_load_commande_Click(sender, e);
+	resetInput();
+}
 };
 }
