@@ -31,9 +31,9 @@ namespace NS_Comp_Svc
 
 
 		System::Data::DataSet^ selectionnerstock(String^ dataName);
-		void ajouterstock(String^, String^, String^, String^);
+		void ajouterstock(String^, String^, String^, String^ ,String^);
 		void supprimerstock(String^);
-		void modifierstock(String^ ,String^, String^, String^);
+		void modifierstock(String^ ,String^, String^, String^ ,String^ );
 
 
 		System::Data::DataSet^ selectionnerPersonnel(String^ dataName);

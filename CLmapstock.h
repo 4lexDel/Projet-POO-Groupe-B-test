@@ -16,8 +16,9 @@ namespace NS_Comp_Mappage
 		String^ quantitestock;
 		String^ prixproduit;
 		String^ seuilreapprovisionnement;
-		String^ nomtaxe;
-		String^ pourcentagetaxe;
+		String^ prixachat;
+		/*String^ nomtaxe;
+		String^ pourcentagetaxe;*/
 
 	public:
 		String^ Select(void) new;
@@ -30,9 +31,11 @@ namespace NS_Comp_Mappage
 		void setprixproduit(String^);
 		void setquantitestock(String^);
 		void setseuilreapprovisionnement(String^);
+		void setprixachat(String^);
+
 		
-		void setnomtaxe(String^);
-		void setpourcentage(String^);
+		/*void setnomtaxe(String^);
+		void setpourcentage(String^);*/
 
 
 
